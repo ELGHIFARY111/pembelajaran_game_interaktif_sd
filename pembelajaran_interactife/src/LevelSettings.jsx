@@ -491,7 +491,7 @@ export function LevelSettings({ initialSettings, defaultSettings, loadError = ''
         <div className="custom-heading">
           <div>
             <p className="eyebrow">Pengaturan custom</p>
-            <h1>Kustomisasi 4 Level</h1>
+            <h1>Kustomisasi</h1>
             <p className="meta">Pilih level untuk mengedit. Perubahan hanya masuk ke proyek setelah file ekspor disalin ke folder public.</p>
           </div>
           <button className="btn btn--ghost btn--small" type="button" onClick={onBack}>Kembali</button>

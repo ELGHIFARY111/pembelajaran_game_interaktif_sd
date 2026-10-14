@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Guide, HobiIcon, Warga } from './art.jsx'
 import {
     LEVEL1,
@@ -281,6 +281,13 @@ function Level3({ onFinish, onBack, play, settings, levelInfo }) {
     const [matched, setMatched] = useState([])
     const [wrong, setWrong] = useState({})
     const [bad, setBad] = useState(null)
+    const pairsRef = useRef(null)
+    const termRefs = useRef(new Map())
+    const meaningRefs = useRef(new Map())
+    const dragRef = useRef(null)
+    const suppressClickRef = useRef(false)
+    const [dragLine, setDragLine] = useState(null)
+    const [matchedLines, setMatchedLines] = useState([])
 
     const item = sentences[si]
     const pool = item.words.map((_, idx) => idx).filter((idx) => !board.includes(idx))
@@ -319,17 +326,23 @@ function Level3({ onFinish, onBack, play, settings, levelInfo }) {
     }
 
     const pickTerm = (t) => {
+        if (suppressClickRef.current) return
         if (matched.includes(t)) return
         play('klik')
         setBad(null)
         setTermSel(t)
     }
     const pickMeaning = (pi) => {
+        if (suppressClickRef.current) return
         if (termSel === null || matched.includes(pi)) return
-        if (pi === termSel) {
+        matchPair(termSel, pi)
+    }
+    const matchPair = (termIndex, meaningIndex) => {
+        if (matched.includes(termIndex) || matched.includes(meaningIndex)) return
+        if (meaningIndex === termIndex) {
             play('benar')
-            const nextMatched = [...matched, pi]
-            const ft = firstTry + ((wrong[pi] ?? 0) === 0 ? 1 : 0)
+            const nextMatched = [...matched, termIndex]
+            const ft = firstTry + ((wrong[termIndex] ?? 0) === 0 ? 1 : 0)
             setMatched(nextMatched)
             setTermSel(null)
             setBad(null)
@@ -337,9 +350,83 @@ function Level3({ onFinish, onBack, play, settings, levelInfo }) {
             if (nextMatched.length === nP) setTimeout(() => onFinish(ft / total), 1300)
         } else {
             play('salah')
-            setWrong({ ...wrong, [termSel]: (wrong[termSel] ?? 0) + 1 })
-            setBad({ m: pi, n: (bad?.n ?? 0) + 1 })
+            setWrong({ ...wrong, [termIndex]: (wrong[termIndex] ?? 0) + 1 })
+            setBad({ m: meaningIndex, n: (bad?.n ?? 0) + 1 })
         }
+    }
+    const getPairPoint = (element, side) => {
+        const wrapper = pairsRef.current
+        if (!wrapper || !element) return null
+        const wrapperRect = wrapper.getBoundingClientRect()
+        const rect = element.getBoundingClientRect()
+        return {
+            x: ((side === 'right' ? rect.right : rect.left) - wrapperRect.left) / wrapperRect.width * 100,
+            y: (rect.top + rect.height / 2 - wrapperRect.top) / wrapperRect.height * 100,
+        }
+    }
+    const getPairPath = (from, to) => {
+        const curve = Math.max(8, Math.abs(to.x - from.x) * 0.4)
+        return `M ${from.x} ${from.y} C ${from.x + curve} ${from.y}, ${to.x - curve} ${to.y}, ${to.x} ${to.y}`
+    }
+    useEffect(() => {
+        if (phase !== 'pasangan' || !pairsRef.current) return undefined
+        const updateLines = () => {
+            setMatchedLines(matched.flatMap((pairIndex) => {
+                const from = getPairPoint(termRefs.current.get(pairIndex), 'right')
+                const to = getPairPoint(meaningRefs.current.get(pairIndex), 'left')
+                return from && to ? [{ pairIndex, from, to }] : []
+            }))
+        }
+        updateLines()
+        const observer = new ResizeObserver(updateLines)
+        observer.observe(pairsRef.current)
+        return () => observer.disconnect()
+    }, [phase, matched])
+    const handlePairPointerDown = (event) => {
+        const termButton = event.target.closest('[data-pair-term]')
+        if (!termButton || event.button !== 0) return
+        const termIndex = Number(termButton.dataset.pairTerm)
+        if (matched.includes(termIndex)) return
+        const from = getPairPoint(termButton, 'right')
+        if (!from) return
+        event.preventDefault()
+        event.currentTarget.setPointerCapture(event.pointerId)
+        dragRef.current = { pointerId: event.pointerId, termIndex, moved: false }
+        setTermSel(termIndex)
+        setBad(null)
+        setDragLine({ from, to: from })
+    }
+    const handlePairPointerMove = (event) => {
+        const drag = dragRef.current
+        const wrapper = pairsRef.current
+        if (!drag || drag.pointerId !== event.pointerId || !wrapper) return
+        const rect = wrapper.getBoundingClientRect()
+        const moved = drag.moved || Math.hypot(event.movementX, event.movementY) > 2
+        dragRef.current = { ...drag, moved }
+        setDragLine({
+            from: getPairPoint(termRefs.current.get(drag.termIndex), 'right'),
+            to: {
+                x: (event.clientX - rect.left) / rect.width * 100,
+                y: (event.clientY - rect.top) / rect.height * 100,
+            },
+        })
+    }
+    const handlePairPointerUp = (event) => {
+        const drag = dragRef.current
+        if (!drag || drag.pointerId !== event.pointerId) return
+        dragRef.current = null
+        setDragLine(null)
+        if (!drag.moved) return
+
+        const meaningButton = document.elementFromPoint(event.clientX, event.clientY)?.closest('[data-pair-meaning]')
+        const meaningIndex = meaningButton ? Number(meaningButton.dataset.pairMeaning) : null
+        if (meaningIndex !== null && !matched.includes(meaningIndex)) {
+            matchPair(drag.termIndex, meaningIndex)
+        } else {
+            setTermSel(null)
+        }
+        suppressClickRef.current = true
+        setTimeout(() => { suppressClickRef.current = false }, 0)
     }
 
     if (phase === 'kalimat') {
@@ -387,13 +474,40 @@ function Level3({ onFinish, onBack, play, settings, levelInfo }) {
 
     return (
         <Shell id={3} step={nS + matched.length + 1} total={total} levelInfo={levelInfo} onBack={onBack} backDisabled={matched.length === nP}>
-            <p className="question">{levelInfo?.secondaryPrompt ?? 'Pasangkan kata dengan maknanya. Ketuk kata, lalu ketuk maknanya.'}</p>
-            <div className="pairs">
+            <p className="question">{levelInfo?.secondaryPrompt ?? 'Tarik garis dari kata ke makna yang cocok. Kamu juga bisa mengetuk kata, lalu mengetuk maknanya.'}</p>
+            <div
+                className="pairs"
+                ref={pairsRef}
+                onPointerDown={handlePairPointerDown}
+                onPointerMove={handlePairPointerMove}
+                onPointerUp={handlePairPointerUp}
+                onPointerCancel={() => {
+                    dragRef.current = null
+                    setDragLine(null)
+                    setTermSel(null)
+                }}
+            >
+                <svg className="pairs__lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                    {matchedLines.map(({ pairIndex, from, to }) => (
+                        <path key={pairIndex} className="pairs__line pairs__line--matched" d={getPairPath(from, to)} />
+                    ))}
+                    {dragLine && <path className="pairs__line pairs__line--active" d={getPairPath(dragLine.from, dragLine.to)} />}
+                </svg>
                 <div className="pairs__col">
                     {pairs.map((p, idx) => {
                         const state = matched.includes(idx) ? ' is-ok' : termSel === idx ? ' is-sel' : ''
                         return (
-                            <button key={idx} type="button" className={'pair' + state} onClick={() => pickTerm(idx)}>
+                            <button
+                                key={idx}
+                                ref={(node) => {
+                                    if (node) termRefs.current.set(idx, node)
+                                    else termRefs.current.delete(idx)
+                                }}
+                                type="button"
+                                className={'pair pair--term' + state}
+                                data-pair-term={idx}
+                                onClick={() => pickTerm(idx)}
+                            >
                                 {p.term}
                             </button>
                         )
@@ -405,8 +519,13 @@ function Level3({ onFinish, onBack, play, settings, levelInfo }) {
                         return (
                             <button
                                 key={pi + (state === ' is-wrong' ? `-${bad.n}` : '')}
+                                ref={(node) => {
+                                    if (node) meaningRefs.current.set(pi, node)
+                                    else meaningRefs.current.delete(pi)
+                                }}
                                 type="button"
                                 className={'pair' + state}
+                                data-pair-meaning={pi}
                                 onClick={() => pickMeaning(pi)}
                             >
                                 {pairs[pi].meaning}

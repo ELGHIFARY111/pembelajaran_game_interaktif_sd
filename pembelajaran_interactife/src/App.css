@@ -95,7 +95,11 @@ h3 {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: linear-gradient(180deg, var(--sky-a) 0%, var(--sky-b) 55%, #d9f7e4 100%);
+  background:
+    radial-gradient(ellipse at 12% 14%, rgba(255, 255, 255, 0.78), transparent 32%),
+    radial-gradient(ellipse at 88% 20%, rgba(115, 204, 255, 0.55), transparent 36%),
+    radial-gradient(ellipse at 76% 92%, rgba(98, 222, 166, 0.32), transparent 38%),
+    linear-gradient(135deg, #9cdef8 0%, #d5f2ff 48%, #e5f9e8 100%);
 }
 .bg {
   position: absolute;
@@ -984,6 +988,22 @@ textarea.note {
   }
 }
 
+@media (min-width: 1000px) {
+  .stage:has(> .intro) {
+    width: min(100%, 1200px);
+  }
+  .intro {
+    width: 100%;
+    gap: clamp(32px, 4vw, 56px);
+  }
+  .intro__card {
+    width: min(100%, 580px);
+  }
+  .intro__art {
+    width: min(100%, 470px);
+  }
+}
+
 /* ---------- Peta kota ---------- */
 .map {
   position: relative;
@@ -1496,11 +1516,38 @@ textarea.note {
   cursor: default;
 }
 .pairs {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1.7fr;
   gap: 12px 20px;
 }
+.pairs__lines {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+.pairs__line {
+  fill: none;
+  stroke: var(--purple);
+  stroke-linecap: round;
+  stroke-width: 0.8;
+  vector-effect: non-scaling-stroke;
+}
+.pairs__line--matched {
+  stroke: var(--ok);
+  stroke-width: 4;
+}
+.pairs__line--active {
+  stroke-dasharray: 2 1.5;
+  stroke-width: 3;
+}
 .pairs__col {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 12px;
   align-content: start;
@@ -1514,6 +1561,13 @@ textarea.note {
   border-radius: 18px;
   background: #fff;
   overflow-wrap: anywhere;
+}
+.pair--term {
+  touch-action: none;
+  cursor: grab;
+}
+.pair--term:active {
+  cursor: grabbing;
 }
 .pair.is-sel {
   background: var(--sun);
@@ -1779,7 +1833,11 @@ textarea.note {
     width: 100%;
   }
   .pairs {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(84px, 0.8fr) minmax(0, 1.4fr);
+    gap: 8px;
+  }
+  .pair {
+    padding: 10px;
   }
   .guide__bird {
     width: 50px;
