@@ -80,7 +80,7 @@ const isImage = (value) => (
   value === ''
   || (typeof value === 'string' && (
     value.startsWith('data:image/')
-    || /^\/images\/(?:[\w-]+\/)*[\w.-]+\.(?:png|jpe?g|webp|gif|svg)$/i.test(value)
+    || /^\/images\/(?:[\w-]+\/)*(?:[\w.-]|%[0-9a-f]{2})+\.(?:png|jpe?g|webp|gif|svg)$/i.test(value)
   ))
 )
 const hasStringArray = (value, length, requireText = false) => (

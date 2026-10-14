@@ -12,7 +12,7 @@ import {
 } from './data.js'
 
 // Bingkai yang sama untuk semua level
-function Shell({ id, step, total, levelInfo, children }) {
+function Shell({ id, step, total, levelInfo, onBack, backDisabled = false, children }) {
     const lv = levelInfo ?? LEVELS[id - 1]
     return (
         <section className="screen level">
@@ -24,6 +24,9 @@ function Shell({ id, step, total, levelInfo, children }) {
                     <h2>{lv.title}</h2>
                 </div>
                 <p className="level__skill">{lv.skill}</p>
+                <button className="btn btn--ghost btn--small" type="button" disabled={backDisabled} onClick={onBack}>
+                    Kembali ke peta
+                </button>
             </header>
             <ul className="roles" aria-label="Peran kelompok">
                 {rolesFor(id).map((r) => (
@@ -56,7 +59,7 @@ function randomItems(items, count) {
 }
 
 /* ---------- Level 1: Jejak Hobi yang Hilang ---------- */
-function Level1({ onFinish, play, settings, levelInfo }) {
+function Level1({ onFinish, onBack, play, settings, levelInfo }) {
     const [i, setI] = useState(0)
     const [attempt, setAttempt] = useState(0)
     const [firstTry, setFirstTry] = useState(0)
@@ -93,7 +96,7 @@ function Level1({ onFinish, play, settings, levelInfo }) {
     }
 
     return (
-        <Shell id={1} step={i + 1} total={rounds.length} levelInfo={levelInfo}>
+        <Shell id={1} step={i + 1} total={rounds.length} levelInfo={levelInfo} onBack={onBack} backDisabled={solved}>
             <p className="question">{round.q}</p>
             <div className={'options' + (solved ? ' is-solved' : '')}>
                 {round.options.map((opt, optionIndex) => {
@@ -128,7 +131,7 @@ function Level1({ onFinish, play, settings, levelInfo }) {
 }
 
 /* ---------- Level 2: Rahasia di Balik Profil Warga ---------- */
-function Level2({ onFinish, play, settings, levelInfo }) {
+function Level2({ onFinish, onBack, play, settings, levelInfo }) {
     const [w, setW] = useState(0)
     const [step, setStep] = useState('hobi')
     const [attempt, setAttempt] = useState(0)
@@ -176,7 +179,7 @@ function Level2({ onFinish, play, settings, levelInfo }) {
         : (levelInfo?.secondaryPrompt ?? 'Kalimat mana yang menjadi bukti hobi {name}?').replace('{name}', warga.name)
 
     return (
-        <Shell id={2} step={w * 2 + (step === 'hobi' ? 1 : 2)} total={total} levelInfo={levelInfo}>
+        <Shell id={2} step={w * 2 + (step === 'hobi' ? 1 : 2)} total={total} levelInfo={levelInfo} onBack={onBack} backDisabled={solved}>
             <p className="question">{question}</p>
             <div className="profile">
                 <Warga {...warga.look} className="profile__avatar" />
@@ -245,7 +248,7 @@ function Level2({ onFinish, play, settings, levelInfo }) {
 }
 
 /* ---------- Level 3: Papan Bukti Detektif ---------- */
-function Level3({ onFinish, play, settings, levelInfo }) {
+function Level3({ onFinish, onBack, play, settings, levelInfo }) {
     const sentencePool = (settings?.level3Sentences ?? LEVEL3_SENTENCES).map((item) => ({
         ...item,
         words: Array.isArray(item.words) ? item.words : item.words.trim().split(/\s+/).filter(Boolean),
@@ -341,7 +344,7 @@ function Level3({ onFinish, play, settings, levelInfo }) {
 
     if (phase === 'kalimat') {
         return (
-            <Shell id={3} step={si + 1} total={total} levelInfo={levelInfo}>
+            <Shell id={3} step={si + 1} total={total} levelInfo={levelInfo} onBack={onBack} backDisabled={okSentence}>
                 <p className="question">{levelInfo?.prompt ?? 'Susun kata-kata ini menjadi kalimat yang benar.'}</p>
                 <div key={`board-${shake}`} className={'board' + (okSentence ? ' is-ok' : '') + (shake > 0 ? ' is-shake' : '')}>
                     {board.length === 0 && <span className="board__hint">Ketuk kata di bawah untuk memasangnya di papan</span>}
@@ -383,7 +386,7 @@ function Level3({ onFinish, play, settings, levelInfo }) {
     }
 
     return (
-        <Shell id={3} step={nS + matched.length + 1} total={total} levelInfo={levelInfo}>
+        <Shell id={3} step={nS + matched.length + 1} total={total} levelInfo={levelInfo} onBack={onBack} backDisabled={matched.length === nP}>
             <p className="question">{levelInfo?.secondaryPrompt ?? 'Pasangkan kata dengan maknanya. Ketuk kata, lalu ketuk maknanya.'}</p>
             <div className="pairs">
                 <div className="pairs__col">
@@ -420,7 +423,7 @@ function Level3({ onFinish, play, settings, levelInfo }) {
 }
 
 /* ---------- Level 4: Kasus Terakhir, Siapakah Aku? ---------- */
-function Level4({ onFinish, play, settings, levelInfo }) {
+function Level4({ onFinish, onBack, play, settings, levelInfo }) {
     const [ci, setCi] = useState(0)
     const [shown, setShown] = useState(1)
     const [pick, setPick] = useState(null)
@@ -474,7 +477,7 @@ function Level4({ onFinish, play, settings, levelInfo }) {
     }
 
     return (
-        <Shell id={4} step={ci + 1} total={cases.length} levelInfo={levelInfo}>
+        <Shell id={4} step={ci + 1} total={cases.length} levelInfo={levelInfo} onBack={onBack}>
             <p className="question">{levelInfo?.prompt ?? 'Siapakah aku? Baca petunjuknya, lalu tebak hobi yang dimaksud.'}</p>
             <ol className="clues">
                 {c.clues.slice(0, shown).map((text, i) => (
@@ -564,11 +567,11 @@ function Level4({ onFinish, play, settings, levelInfo }) {
     )
 }
 
-export function LevelScreen({ id, onFinish, play, settings }) {
+export function LevelScreen({ id, onFinish, onBack, play, settings }) {
     const finish = (ratio) => onFinish(id, scoreFrom(ratio))
     const levelInfo = settings?.levels[id - 1]
-    if (id === 1) return <Level1 onFinish={finish} play={play} settings={settings} levelInfo={levelInfo} />
-    if (id === 2) return <Level2 onFinish={finish} play={play} settings={settings} levelInfo={levelInfo} />
-    if (id === 3) return <Level3 onFinish={finish} play={play} settings={settings} levelInfo={levelInfo} />
-    return <Level4 onFinish={finish} play={play} settings={settings} levelInfo={levelInfo} />
+    if (id === 1) return <Level1 onFinish={finish} onBack={onBack} play={play} settings={settings} levelInfo={levelInfo} />
+    if (id === 2) return <Level2 onFinish={finish} onBack={onBack} play={play} settings={settings} levelInfo={levelInfo} />
+    if (id === 3) return <Level3 onFinish={finish} onBack={onBack} play={play} settings={settings} levelInfo={levelInfo} />
+    return <Level4 onFinish={finish} onBack={onBack} play={play} settings={settings} levelInfo={levelInfo} />
 }

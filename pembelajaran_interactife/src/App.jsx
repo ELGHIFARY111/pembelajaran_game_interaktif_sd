@@ -64,6 +64,7 @@ export default function App() {
   const [state, dispatch] = useReducer(reducer, initialState)
   const [storedSettings] = useState(loadLevelSettings)
   const [levelSettings, setLevelSettings] = useState(storedSettings.settings)
+  const [defaultLevelSettings, setDefaultLevelSettings] = useState(storedSettings.settings)
   const levelsDone = doneCount(state.results)
 
   useEffect(() => {
@@ -74,7 +75,6 @@ export default function App() {
     } catch (error) {
       console.error('Gagal memeriksa pengaturan lokal:', error)
     }
-    if (hasLocalSettings) return () => { active = false }
 
     fetch(`${import.meta.env.BASE_URL}level-content.json`)
       .then((response) => {
@@ -82,14 +82,17 @@ export default function App() {
         return response.json()
       })
       .then((content) => {
-        if (active) setLevelSettings(parseLevelSettings(content))
+        if (!active) return
+        const defaults = parseLevelSettings(content)
+        setDefaultLevelSettings(defaults)
+        if (!hasLocalSettings || storedSettings.error) setLevelSettings(defaults)
       })
       .catch((error) => {
         console.error('Gagal memuat konten level dari JSON publik:', error)
       })
 
     return () => { active = false }
-  }, [])
+  }, [storedSettings.error])
 
   const toggleSound = () => {
     setMuted(!state.muted)
@@ -144,6 +147,7 @@ export default function App() {
             results={state.results}
             levelsDone={levelsDone}
             walkerPos={state.walkerPos}
+            onBack={() => dispatch({ type: 'restart' })}
             onOpen={(id) => {
               play('klik')
               dispatch({ type: 'open', id })
@@ -155,7 +159,13 @@ export default function App() {
         )}
 
         {state.screen === 'level' && (
-          <LevelScreen id={state.current} onFinish={finishLevel} play={play} settings={levelSettings} />
+          <LevelScreen
+            id={state.current}
+            onFinish={finishLevel}
+            onBack={() => dispatch({ type: 'map' })}
+            play={play}
+            settings={levelSettings}
+          />
         )}
 
         {state.screen === 'result' && (
@@ -165,6 +175,7 @@ export default function App() {
             isLast={levelsDone >= LEVELS.length}
             onRetry={() => dispatch({ type: 'open', id: state.current })}
             onNext={() => (levelsDone >= LEVELS.length ? goFinale() : dispatch({ type: 'map' }))}
+            onBack={() => dispatch({ type: 'map' })}
             levels={levelSettings.levels}
           />
         )}
@@ -174,6 +185,7 @@ export default function App() {
             group={state.group}
             results={state.results}
             runId={state.runId}
+            onBack={() => dispatch({ type: 'map' })}
             onRestart={() => dispatch({ type: 'restart' })}
           />
         )}
@@ -181,6 +193,7 @@ export default function App() {
         {state.screen === 'custom' && (
           <LevelSettings
             initialSettings={levelSettings}
+            defaultSettings={defaultLevelSettings}
             loadError={storedSettings.error}
             onBack={() => dispatch({ type: 'restart' })}
             onSave={setLevelSettings}

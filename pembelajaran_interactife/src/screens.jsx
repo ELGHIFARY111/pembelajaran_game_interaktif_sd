@@ -217,7 +217,7 @@ function stand(i) {
   return { x: NODES[i].x - 9, y: NODES[i].y + 14 }
 }
 
-export function CityMap({ results, levelsDone, walkerPos, onOpen, onFinale, levels = LEVELS, appearance = {} }) {
+export function CityMap({ results, levelsDone, walkerPos, onOpen, onBack, onFinale, levels = LEVELS, appearance = {} }) {
   const target = Math.min(levelsDone, 3)
   const from = stand(walkerPos)
   const to = stand(target)
@@ -326,6 +326,9 @@ export function CityMap({ results, levelsDone, walkerPos, onOpen, onFinale, leve
       </div>
 
       <div className="map__foot">
+        <button className="btn btn--ghost btn--small" type="button" onClick={onBack}>
+          Kembali ke awal
+        </button>
         <Guide>{tip}</Guide>
         {allDone && (
           <button className="btn btn--big btn--pulse" type="button" onClick={onFinale}>
@@ -337,7 +340,7 @@ export function CityMap({ results, levelsDone, walkerPos, onOpen, onFinale, leve
   )
 }
 
-export function LevelResult({ levelId, result, isLast, onNext, onRetry, levels = LEVELS }) {
+export function LevelResult({ levelId, result, isLast, onNext, onRetry, onBack, levels = LEVELS }) {
   let msg = 'Kamu berhasil! Terus berlatih ya, detektif.'
   if (result.stars === 3) msg = 'Luar biasa, detektif! Hampir tanpa salah.'
   else if (result.stars === 2) msg = 'Bagus sekali! Kerja sama kelompokmu keren.'
@@ -358,6 +361,11 @@ export function LevelResult({ levelId, result, isLast, onNext, onRetry, levels =
         </p>
         <Guide>{msg}</Guide>
         <div className="row row--center">
+          {isLast && (
+            <button className="btn btn--ghost" type="button" onClick={onBack}>
+              Kembali ke peta
+            </button>
+          )}
           <button className="btn btn--ghost" type="button" onClick={onRetry}>
             Ulangi level
           </button>
@@ -370,7 +378,7 @@ export function LevelResult({ levelId, result, isLast, onNext, onRetry, levels =
   )
 }
 
-export function Finale({ group, results, runId, onRestart }) {
+export function Finale({ group, results, runId, onBack, onRestart }) {
   const list = Object.values(results)
   const total = list.reduce((sum, r) => sum + r.points, 0)
   const stars = list.reduce((sum, r) => sum + r.stars, 0)
@@ -404,6 +412,9 @@ export function Finale({ group, results, runId, onRestart }) {
         <Board list={board} highlightId={runId} limit={5} />
 
         <div className="row row--center no-print">
+          <button className="btn btn--ghost" type="button" onClick={onBack}>
+            Kembali ke peta
+          </button>
           <button className="btn btn--ghost" type="button" onClick={() => window.print()}>
             Cetak sertifikat
           </button>

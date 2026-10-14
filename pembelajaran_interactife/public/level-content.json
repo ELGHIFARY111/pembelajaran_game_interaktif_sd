@@ -1,1971 +1,1329 @@
 {
-  "appearance": {
-    "backgroundImage": "",
-    "introImage": "",
-    "detectiveImage": "",
-    "mapImage": ""
-  },
-  "questionCounts": {
-    "level1": 10,
-    "level2": 10,
-    "level3Sentences": 10,
-    "level3Pairs": 10,
-    "level4": 10
-  },
-  "levels": [
-    {
-      "title": "TKP: Jejak Hobi yang Hilang",
-      "place": "Taman Kota",
-      "skill": "Mengenali jenis hobi",
-      "prompt": "",
-      "secondaryPrompt": ""
-    },
-    {
-      "title": "Rahasia di Balik Profil Warga",
-      "place": "Rumah Warga",
-      "skill": "Membaca dan memahami teks",
-      "prompt": "Apa hobi {name}?",
-      "secondaryPrompt": "Kalimat mana yang menjadi bukti hobi {name}?"
-    },
-    {
-      "title": "Papan Bukti Detektif",
-      "place": "Markas Detektif",
-      "skill": "Kosakata dan kalimat",
-      "prompt": "Susun kata-kata ini menjadi kalimat yang benar.",
-      "secondaryPrompt": "Pasangkan kata dengan maknanya. Ketuk kata, lalu ketuk maknanya."
-    },
-    {
-      "title": "Kasus Terakhir: Siapakah Aku?",
-      "place": "Balai Kota",
-      "skill": "Menarik kesimpulan",
-      "prompt": "Siapakah aku? Baca petunjuknya, lalu tebak hobi yang dimaksud.",
-      "secondaryPrompt": ""
-    }
-  ],
-  "level1": [
-    {
-      "q": "Benda yang digunakan untuk melukis adalah ....",
-      "hint": "Benda ini punya bulu halus di ujungnya dan dicelupkan ke cat.",
-      "icons": [
-        "kuas",
-        "raket",
-        "bola"
-      ],
-      "options": [
-        "Melukis",
-        "Bulu tangkis",
-        "Bermain bola"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "q": "Benda yang dipakai untuk membaca cerita adalah ....",
-      "hint": "Benda ini punya banyak halaman berisi cerita.",
-      "icons": [
-        "bola",
-        "buku",
-        "gitar"
-      ],
-      "options": [
-        "Bermain bola",
-        "Membaca",
-        "Bermain gitar"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 1
-    },
-    {
-      "q": "Benda yang dimainkan untuk membuat musik adalah ....",
-      "hint": "Benda ini punya senar yang dipetik.",
-      "icons": [
-        "kuas",
-        "tanaman",
-        "gitar"
-      ],
-      "options": [
-        "Melukis",
-        "Berkebun",
-        "Bermain gitar"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 2
-    },
-    {
-      "q": "Benda yang dirawat saat berkebun adalah ....",
-      "hint": "Benda ini perlu disiram dan terkena sinar matahari.",
-      "icons": [
-        "buku",
-        "tanaman",
-        "raket"
-      ],
-      "options": [
-        "Membaca",
-        "Berkebun",
-        "Bulu tangkis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 1
-    },
-    {
-      "q": "Benda yang dipakai untuk bermain bulu tangkis adalah ....",
-      "hint": "Benda ini dipakai untuk memukul kok.",
-      "icons": [
-        "raket",
-        "bola",
-        "gitar"
-      ],
-      "options": [
-        "Bulu tangkis",
-        "Bermain bola",
-        "Bermain gitar"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "q": "Sebelum melukis, Rani menyiapkan ....",
-      "hint": "Benda ini memiliki gagang dan bulu untuk mengoleskan cat.",
-      "icons": [
-        "kuas",
-        "buku",
-        "raket"
-      ],
-      "options": [
-        "Melukis",
-        "Membaca",
-        "Bulu tangkis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "q": "Agar bisa membaca dongeng, kita membuka ....",
-      "hint": "Di dalam benda ini ada halaman dan tulisan.",
-      "icons": [
-        "gitar",
-        "buku",
-        "bola"
-      ],
-      "options": [
-        "Bermain gitar",
-        "Membaca",
-        "Bermain bola"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 1
-    },
-    {
-      "q": "Benda yang dipetik saat bermain musik adalah ....",
-      "hint": "Benda ini memiliki senar.",
-      "icons": [
-        "tanaman",
-        "gitar",
-        "kuas"
-      ],
-      "options": [
-        "Berkebun",
-        "Bermain gitar",
-        "Melukis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 1
-    },
-    {
-      "q": "Saat merawat kebun, kita menyiram ....",
-      "hint": "Benda hidup ini tumbuh di tanah dan membutuhkan air.",
-      "icons": [
-        "raket",
-        "tanaman",
-        "buku"
-      ],
-      "options": [
-        "Bulu tangkis",
-        "Berkebun",
-        "Membaca"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 1
-    },
-    {
-      "q": "Untuk memukul kok saat bermain bulu tangkis, gunakan ....",
-      "hint": "Benda ini memiliki pegangan dan permukaan berjaring.",
-      "icons": [
-        "raket",
-        "gitar",
-        "kuas"
-      ],
-      "options": [
-        "Bulu tangkis",
-        "Bermain gitar",
-        "Melukis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "q": "Alat yang membantu memberi warna pada gambar adalah ....",
-      "hint": "Celupkan ujung alat ini ke cat.",
-      "icons": [
-        "bola",
-        "kuas",
-        "buku"
-      ],
-      "options": [
-        "Bermain bola",
-        "Melukis",
-        "Membaca"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 1
-    },
-    {
-      "q": "Cerita petualangan dapat kita baca di ....",
-      "hint": "Cari benda yang memiliki sampul dan banyak halaman.",
-      "icons": [
-        "buku",
-        "tanaman",
-        "raket"
-      ],
-      "options": [
-        "Membaca",
-        "Berkebun",
-        "Bulu tangkis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "q": "Alat musik yang mempunyai enam senar biasanya adalah ....",
-      "hint": "Alat musik ini dimainkan dengan cara dipetik atau digenjreng.",
-      "icons": [
-        "gitar",
-        "bola",
-        "kuas"
-      ],
-      "options": [
-        "Bermain gitar",
-        "Bermain bola",
-        "Melukis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "q": "Benda yang tumbuh dan dapat berbunga di kebun adalah ....",
-      "hint": "Benda ini perlu dirawat dan disiram.",
-      "icons": [
-        "tanaman",
-        "raket",
-        "gitar"
-      ],
-      "options": [
-        "Berkebun",
-        "Bulu tangkis",
-        "Bermain gitar"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "q": "Kok dipukul menggunakan ....",
-      "hint": "Alat olahraga ini diayunkan untuk memukul kok.",
-      "icons": [
-        "buku",
-        "raket",
-        "tanaman"
-      ],
-      "options": [
-        "Membaca",
-        "Bulu tangkis",
-        "Berkebun"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 1
-    },
-    {
-      "q": "Hobi melukis paling sering menggunakan cat dan ....",
-      "hint": "Alat ini membantu mengoleskan cat ke kertas.",
-      "icons": [
-        "kuas",
-        "bola",
-        "gitar"
-      ],
-      "options": [
-        "Melukis",
-        "Bermain bola",
-        "Bermain gitar"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "q": "Tempat yang berisi banyak halaman untuk dibaca disebut ....",
-      "hint": "Benda ini bisa berisi cerita atau pengetahuan.",
-      "icons": [
-        "buku",
-        "raket",
-        "tanaman"
-      ],
-      "options": [
-        "Membaca",
-        "Bulu tangkis",
-        "Berkebun"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "q": "Untuk menghasilkan nada dari senar, kita dapat memainkan ....",
-      "hint": "Alat musik ini mempunyai badan kayu dan senar.",
-      "icons": [
-        "gitar",
-        "kuas",
-        "bola"
-      ],
-      "options": [
-        "Bermain gitar",
-        "Melukis",
-        "Bermain bola"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "q": "Pupuk dan air membantu tumbuhnya ....",
-      "hint": "Benda ini bisa tumbuh di pot atau kebun.",
-      "icons": [
-        "tanaman",
-        "buku",
-        "raket"
-      ],
-      "options": [
-        "Berkebun",
-        "Membaca",
-        "Bulu tangkis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "q": "Alat berjaring untuk memukul kok dalam bulu tangkis adalah ....",
-      "hint": "Pilih alat yang dipakai untuk memukul kok.",
-      "icons": [
-        "raket",
-        "bola",
-        "gitar"
-      ],
-      "options": [
-        "Bulu tangkis",
-        "Bermain bola",
-        "Bermain gitar"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    }
-  ],
-  "level2": [
-    {
-      "name": "Dita",
-      "look": {
-        "skin": "#f4c7a0",
-        "hair": "#3b2a20",
-        "shirt": "#17b3a3"
-      },
-      "sentences": [
-        "Setiap hari Minggu, Dita pergi ke taman.",
-        "Ia membawa buku dan duduk di bawah pohon untuk menikmati cerita.",
-        "Dita merasa tenang dan senang."
-      ],
-      "evidence": [
-        1
-      ],
-      "icons": [
-        "buku",
-        "kuas",
-        "raket"
-      ],
-      "options": [
-        "Membaca",
-        "Melukis",
-        "Bulu tangkis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "name": "Rani",
-      "look": {
-        "skin": "#e8b48c",
-        "hair": "#1e2a4a",
-        "shirt": "#ff6f61"
-      },
-      "sentences": [
-        "Sepulang sekolah, Rani mengambil kuas dan cat.",
-        "Ia menggambar bunga di atas kertas.",
-        "Rani senang karena gambarnya berwarna-warni."
-      ],
-      "evidence": [
-        0,
-        1
-      ],
-      "icons": [
-        "bola",
-        "gitar",
-        "kuas"
-      ],
-      "options": [
-        "Bermain bola",
-        "Bermain gitar",
-        "Melukis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 2
-    },
-    {
-      "name": "Bima",
-      "look": {
-        "skin": "#d9a37a",
-        "hair": "#222222",
-        "shirt": "#7a5cff"
-      },
-      "sentences": [
-        "Bima tinggal di dekat taman kota.",
-        "Ia anak yang ramah dan suka berteman.",
-        "Setiap sore Bima memetik senar gitar dan bernyanyi di teras rumah."
-      ],
-      "evidence": [
-        2
-      ],
-      "icons": [
-        "tanaman",
-        "gitar",
-        "buku"
-      ],
-      "options": [
-        "Berkebun",
-        "Bermain gitar",
-        "Membaca"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 1
-    },
-    {
-      "name": "Sari",
-      "look": {
-        "skin": "#f0c49f",
-        "hair": "#5a3828",
-        "shirt": "#f28b64"
-      },
-      "sentences": [
-        "Sari menyimpan cat warna-warni di meja.",
-        "Ia membuat gambar pemandangan di buku gambar.",
-        "Tangannya menggerakkan kuas perlahan."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "kuas",
-        "buku",
-        "bola"
-      ],
-      "options": [
-        "Melukis",
-        "Membaca",
-        "Bermain bola"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "name": "Doni",
-      "look": {
-        "skin": "#d9a37a",
-        "hair": "#302820",
-        "shirt": "#4c9db5"
-      },
-      "sentences": [
-        "Doni berlatih di lapangan setiap Sabtu.",
-        "Ia memukul kok melewati net.",
-        "Doni membawa raket di dalam tas olahraga."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "gitar",
-        "raket",
-        "tanaman"
-      ],
-      "options": [
-        "Bermain gitar",
-        "Bulu tangkis",
-        "Berkebun"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 1
-    },
-    {
-      "name": "Lala",
-      "look": {
-        "skin": "#e8b48c",
-        "hair": "#302820",
-        "shirt": "#d979a7"
-      },
-      "sentences": [
-        "Lala memilih cerita tentang hewan.",
-        "Ia membaca beberapa halaman sebelum tidur.",
-        "Buku ceritanya diletakkan di samping bantal."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "tanaman",
-        "gitar",
-        "buku"
-      ],
-      "options": [
-        "Berkebun",
-        "Bermain gitar",
-        "Membaca"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 2
-    },
-    {
-      "name": "Riko",
-      "look": {
-        "skin": "#f4c7a0",
-        "hair": "#4c3429",
-        "shirt": "#79ad64"
-      },
-      "sentences": [
-        "Riko memiliki pot kecil di teras.",
-        "Setiap pagi ia menyiram bunga dan membersihkan daunnya.",
-        "Riko senang melihat tanaman tumbuh subur."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "bola",
-        "kuas",
-        "tanaman"
-      ],
-      "options": [
-        "Bermain bola",
-        "Melukis",
-        "Berkebun"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 2
-    },
-    {
-      "name": "Maya",
-      "look": {
-        "skin": "#d9a37a",
-        "hair": "#241e1a",
-        "shirt": "#8b78ce"
-      },
-      "sentences": [
-        "Maya belajar memainkan lagu sederhana.",
-        "Ia memetik senar gitar mengikuti irama.",
-        "Saat berkumpul, Maya mengiringi teman-temannya bernyanyi."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "gitar",
-        "buku",
-        "raket"
-      ],
-      "options": [
-        "Bermain gitar",
-        "Membaca",
-        "Bulu tangkis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "name": "Fajar",
-      "look": {
-        "skin": "#e8b48c",
-        "hair": "#33251e",
-        "shirt": "#e2ad45"
-      },
-      "sentences": [
-        "Fajar berlari ke lapangan bersama teman.",
-        "Mereka menendang bola ke arah gawang.",
-        "Fajar menjadi penjaga gawang pada babak kedua."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "kuas",
-        "bola",
-        "buku"
-      ],
-      "options": [
-        "Melukis",
-        "Bermain bola",
-        "Membaca"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 1
-    },
-    {
-      "name": "Nina",
-      "look": {
-        "skin": "#f4c7a0",
-        "hair": "#5a3828",
-        "shirt": "#5caa9a"
-      },
-      "sentences": [
-        "Nina sering meminjam cerita dari perpustakaan.",
-        "Ia membaca buku selama waktu istirahat.",
-        "Setelah selesai, Nina mengembalikan buku ke rak."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "buku",
-        "raket",
-        "gitar"
-      ],
-      "options": [
-        "Membaca",
-        "Bulu tangkis",
-        "Bermain gitar"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "name": "Ardi",
-      "look": {
-        "skin": "#d9a37a",
-        "hair": "#302820",
-        "shirt": "#e67759"
-      },
-      "sentences": [
-        "Ardi suka membuat kartu ucapan sendiri.",
-        "Ia mencampur cat lalu melukis gambar matahari.",
-        "Kuas kecil dipakainya untuk membuat garis halus."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "raket",
-        "tanaman",
-        "kuas"
-      ],
-      "options": [
-        "Bulu tangkis",
-        "Berkebun",
-        "Melukis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 2
-    },
-    {
-      "name": "Tia",
-      "look": {
-        "skin": "#e8b48c",
-        "hair": "#39271f",
-        "shirt": "#62a7d6"
-      },
-      "sentences": [
-        "Tia mengikuti latihan musik di sekolah.",
-        "Ia belajar memetik gitar dengan benar.",
-        "Lagu yang dimainkan Tia terdengar merdu."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "tanaman",
-        "bola",
-        "gitar"
-      ],
-      "options": [
-        "Berkebun",
-        "Bermain bola",
-        "Bermain gitar"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 2
-    },
-    {
-      "name": "Bagas",
-      "look": {
-        "skin": "#f4c7a0",
-        "hair": "#302820",
-        "shirt": "#8b78ce"
-      },
-      "sentences": [
-        "Bagas memakai sepatu olahraga di lapangan.",
-        "Ia menggiring bola lalu mengoper kepada temannya.",
-        "Mereka bermain sepak bola dengan gembira."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "bola",
-        "buku",
-        "raket"
-      ],
-      "options": [
-        "Bermain bola",
-        "Membaca",
-        "Bulu tangkis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "name": "Wulan",
-      "look": {
-        "skin": "#d9a37a",
-        "hair": "#5a3828",
-        "shirt": "#d979a7"
-      },
-      "sentences": [
-        "Wulan menanam bibit cabai di pot.",
-        "Ia memberi air secukupnya setiap sore.",
-        "Wulan mencatat pertumbuhan tanamannya."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "tanaman",
-        "kuas",
-        "buku"
-      ],
-      "options": [
-        "Berkebun",
-        "Melukis",
-        "Membaca"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "name": "Rafa",
-      "look": {
-        "skin": "#e8b48c",
-        "hair": "#302820",
-        "shirt": "#4c9db5"
-      },
-      "sentences": [
-        "Rafa dan kakaknya bermain di lapangan.",
-        "Rafa mengayunkan raket untuk mengembalikan kok.",
-        "Mereka bergantian bermain bulu tangkis."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "raket",
-        "gitar",
-        "bola"
-      ],
-      "options": [
-        "Bulu tangkis",
-        "Bermain gitar",
-        "Bermain bola"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "name": "Intan",
-      "look": {
-        "skin": "#f4c7a0",
-        "hair": "#33251e",
-        "shirt": "#79ad64"
-      },
-      "sentences": [
-        "Intan menyukai cerita tentang luar angkasa.",
-        "Ia membaca buku ensiklopedia bersama ayah.",
-        "Banyak hal baru ia temukan dari bacaannya."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "kuas",
-        "tanaman",
-        "buku"
-      ],
-      "options": [
-        "Melukis",
-        "Berkebun",
-        "Membaca"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 2
-    },
-    {
-      "name": "Yusuf",
-      "look": {
-        "skin": "#d9a37a",
-        "hair": "#241e1a",
-        "shirt": "#e2ad45"
-      },
-      "sentences": [
-        "Yusuf duduk di kursi dekat jendela.",
-        "Ia menyetem senar gitar sebelum berlatih.",
-        "Yusuf memainkan lagu untuk keluarganya."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "gitar",
-        "bola",
-        "kuas"
-      ],
-      "options": [
-        "Bermain gitar",
-        "Bermain bola",
-        "Melukis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 0
-    },
-    {
-      "name": "Kiki",
-      "look": {
-        "skin": "#e8b48c",
-        "hair": "#5a3828",
-        "shirt": "#e67759"
-      },
-      "sentences": [
-        "Kiki menyiapkan kertas dan cat air.",
-        "Ia melukis ikan berwarna biru.",
-        "Kiki membersihkan kuas setelah selesai."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "tanaman",
-        "raket",
-        "kuas"
-      ],
-      "options": [
-        "Berkebun",
-        "Bulu tangkis",
-        "Melukis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 2
-    },
-    {
-      "name": "Ayu",
-      "look": {
-        "skin": "#f4c7a0",
-        "hair": "#302820",
-        "shirt": "#62a7d6"
-      },
-      "sentences": [
-        "Ayu membantu ibu di kebun.",
-        "Ia menggemburkan tanah dan menanam bunga.",
-        "Setiap hari Ayu memeriksa tanaman yang dirawatnya."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "bola",
-        "tanaman",
-        "buku"
-      ],
-      "options": [
-        "Bermain bola",
-        "Berkebun",
-        "Membaca"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 1
-    },
-    {
-      "name": "Dewa",
-      "look": {
-        "skin": "#d9a37a",
-        "hair": "#39271f",
-        "shirt": "#5caa9a"
-      },
-      "sentences": [
-        "Dewa membawa botol minum ke lapangan.",
-        "Ia berlatih mengarahkan kok dengan raket.",
-        "Dewa ingin bermain bulu tangkis dengan lebih baik."
-      ],
-      "evidence": [
-        0,
-        1,
-        2
-      ],
-      "icons": [
-        "buku",
-        "gitar",
-        "raket"
-      ],
-      "options": [
-        "Membaca",
-        "Bermain gitar",
-        "Bulu tangkis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        ""
-      ],
-      "answer": 2
-    }
-  ],
-  "level3Sentences": [
-    {
-      "words": "suka Rani bunga menggambar",
-      "answers": [
-        "Rani suka menggambar bunga"
-      ]
-    },
-    {
-      "words": "gitar Bima sore bermain setiap",
-      "answers": [
-        "Bima bermain gitar setiap sore",
-        "Setiap sore Bima bermain gitar"
-      ]
-    },
-    {
-      "words": "di Dita taman membaca buku",
-      "answers": [
-        "Dita membaca buku di taman"
-      ]
-    },
-    {
-      "words": "setiap pagi Ayu menyiram tanaman",
-      "answers": [
-        "Ayu menyiram tanaman setiap pagi"
-      ]
-    },
-    {
-      "words": "Rafa kok memukul dengan raket",
-      "answers": [
-        "Rafa memukul kok dengan raket"
-      ]
-    },
-    {
-      "words": "gitar Yusuf memainkan lagu merdu dengan",
-      "answers": [
-        "Yusuf memainkan lagu merdu dengan gitar"
-      ]
-    },
-    {
-      "words": "bunga Kiki melukis di kertas",
-      "answers": [
-        "Kiki melukis bunga di kertas"
-      ]
-    },
-    {
-      "words": "Bagas bola menendang ke gawang",
-      "answers": [
-        "Bagas menendang bola ke gawang"
-      ]
-    },
-    {
-      "words": "Intan cerita membaca sebelum tidur",
-      "answers": [
-        "Intan membaca cerita sebelum tidur"
-      ]
-    },
-    {
-      "words": "Wulan bibit menanam di pot",
-      "answers": [
-        "Wulan menanam bibit di pot"
-      ]
-    },
-    {
-      "words": "Doni bulu bermain tangkis setiap Sabtu",
-      "answers": [
-        "Doni bermain bulu tangkis setiap Sabtu"
-      ]
-    },
-    {
-      "words": "Maya senar gitar memetik perlahan",
-      "answers": [
-        "Maya memetik senar gitar perlahan"
-      ]
-    },
-    {
-      "words": "Sari warna mencampur cat di palet",
-      "answers": [
-        "Sari mencampur warna cat di palet"
-      ]
-    },
-    {
-      "words": "Fajar bola mengoper kepada teman",
-      "answers": [
-        "Fajar mengoper bola kepada teman"
-      ]
-    },
-    {
-      "words": "Nina buku meminjam dari perpustakaan",
-      "answers": [
-        "Nina meminjam buku dari perpustakaan"
-      ]
-    },
-    {
-      "words": "Riko daun membersihkan tanaman di teras",
-      "answers": [
-        "Riko membersihkan daun tanaman di teras"
-      ]
-    },
-    {
-      "words": "Tia lagu berlatih memainkan gitar dengan",
-      "answers": [
-        "Tia berlatih memainkan lagu dengan gitar"
-      ]
-    },
-    {
-      "words": "Ardi gambar membuat kuas dengan",
-      "answers": [
-        "Ardi membuat gambar dengan kuas"
-      ]
-    },
-    {
-      "words": "Bima sore bernyanyi sambil bermain gitar hari",
-      "answers": [
-        "Bima bernyanyi sambil bermain gitar sore hari"
-      ]
-    },
-    {
-      "words": "Lala halaman membaca cerita beberapa",
-      "answers": [
-        "Lala membaca beberapa halaman cerita"
-      ]
-    }
-  ],
-  "level3Pairs": [
-    {
-      "term": "Hobi",
-      "meaning": "Kegiatan yang disukai dan dilakukan saat waktu luang"
-    },
-    {
-      "term": "Melukis",
-      "meaning": "Membuat gambar dengan kuas dan cat"
-    },
-    {
-      "term": "Berkebun",
-      "meaning": "Menanam dan merawat tumbuhan"
-    },
-    {
-      "term": "Kuas",
-      "meaning": "Alat bergagang untuk mengoleskan cat"
-    },
-    {
-      "term": "Warna",
-      "meaning": "Rupa yang tampak seperti merah, biru, atau kuning"
-    },
-    {
-      "term": "Membaca",
-      "meaning": "Melihat tulisan lalu memahami isinya"
-    },
-    {
-      "term": "Novel",
-      "meaning": "Buku cerita yang memiliki banyak halaman"
-    },
-    {
-      "term": "Halaman",
-      "meaning": "Lembar-lembar yang menyusun sebuah buku"
-    },
-    {
-      "term": "Perpustakaan",
-      "meaning": "Tempat untuk membaca dan meminjam buku"
-    },
-    {
-      "term": "Raket",
-      "meaning": "Alat berjaring yang digunakan untuk memukul kok"
-    },
-    {
-      "term": "Kok",
-      "meaning": "Benda ringan yang dipukul dalam bulu tangkis"
-    },
-    {
-      "term": "Net",
-      "meaning": "Jaring pembatas di tengah lapangan"
-    },
-    {
-      "term": "Gitar",
-      "meaning": "Alat musik berdawai yang dimainkan dengan dipetik"
-    },
-    {
-      "term": "Senar",
-      "meaning": "Dawai yang bergetar untuk menghasilkan nada"
-    },
-    {
-      "term": "Irama",
-      "meaning": "Panjang pendek bunyi yang tersusun teratur"
-    },
-    {
-      "term": "Kebun",
-      "meaning": "Lahan tempat menanam dan merawat tumbuhan"
-    },
-    {
-      "term": "Menyiram",
-      "meaning": "Memberi air kepada tanaman"
-    },
-    {
-      "term": "Bibit",
-      "meaning": "Tanaman kecil yang dapat ditanam"
-    },
-    {
-      "term": "Panen",
-      "meaning": "Mengambil hasil tanaman yang sudah tumbuh"
-    },
-    {
-      "term": "Sepak bola",
-      "meaning": "Permainan beregu yang menggunakan bola dan gawang"
-    }
-  ],
-  "level4": [
-    {
-      "clues": [
-        "Aku menyukai kegiatan di luar ruangan.",
-        "Aku menggunakan raket dan kok.",
-        "Aku biasanya bermain bersama orang lain."
-      ],
-      "icons": [
-        "bola",
-        "raket",
-        "kuas",
-        "buku"
-      ],
-      "options": [
-        "Bermain bola",
-        "Bulu tangkis",
-        "Melukis",
-        "Membaca"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 1,
-      "hint": "Baca lagi petunjuk nomor 2. Benda apa yang dipakai?",
-      "chips": [
-        "di luar ruangan",
-        "memakai raket dan kok",
-        "dimainkan bersama orang lain"
-      ]
-    },
-    {
-      "clues": [
-        "Aku suka kegiatan di taman.",
-        "Aku menyiram dan merawat tanaman setiap pagi.",
-        "Aku senang melihat bunga mekar."
-      ],
-      "icons": [
-        "gitar",
-        "buku",
-        "tanaman",
-        "raket"
-      ],
-      "options": [
-        "Bermain gitar",
-        "Membaca",
-        "Berkebun",
-        "Bulu tangkis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 2,
-      "hint": "Baca lagi petunjuk nomor 2. Apa yang aku rawat?",
-      "chips": [
-        "di taman",
-        "merawat tanaman",
-        "senang melihat bunga mekar"
-      ]
-    },
-    {
-      "clues": [
-        "Aku suka membuat gambar.",
-        "Aku memilih warna yang cerah.",
-        "Aku mengoleskan cat pada kertas dengan alat bergagang."
-      ],
-      "icons": [
-        "kuas",
-        "raket",
-        "bola",
-        "gitar"
-      ],
-      "options": [
-        "Melukis",
-        "Bulu tangkis",
-        "Bermain bola",
-        "Bermain gitar"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 0,
-      "hint": "Alat apa yang digunakan untuk mengoleskan cat?",
-      "chips": [
-        "membuat gambar",
-        "memakai cat",
-        "menggunakan kuas"
-      ]
-    },
-    {
-      "clues": [
-        "Aku senang membaca cerita.",
-        "Aku membalik halaman untuk mengetahui kelanjutannya.",
-        "Benda yang kubawa memiliki sampul dan banyak tulisan."
-      ],
-      "icons": [
-        "buku",
-        "tanaman",
-        "raket",
-        "bola"
-      ],
-      "options": [
-        "Membaca",
-        "Berkebun",
-        "Bulu tangkis",
-        "Bermain bola"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 0,
-      "hint": "Benda apa yang memiliki halaman dan sampul?",
-      "chips": [
-        "membaca cerita",
-        "membalik halaman",
-        "membawa buku"
-      ]
-    },
-    {
-      "clues": [
-        "Aku menyukai olahraga di lapangan.",
-        "Aku berdiri di sisi berlawanan dengan teman.",
-        "Aku memukul benda kecil melewati net."
-      ],
-      "icons": [
-        "gitar",
-        "raket",
-        "kuas",
-        "buku"
-      ],
-      "options": [
-        "Bermain gitar",
-        "Bulu tangkis",
-        "Melukis",
-        "Membaca"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 1,
-      "hint": "Alat apa yang dipakai untuk memukul kok?",
-      "chips": [
-        "berolahraga",
-        "memukul kok",
-        "bermain melewati net"
-      ]
-    },
-    {
-      "clues": [
-        "Aku suka membuat bunyi yang indah.",
-        "Aku duduk sambil memegang alat musik.",
-        "Jari-jariku memetik dawai."
-      ],
-      "icons": [
-        "tanaman",
-        "gitar",
-        "bola",
-        "kuas"
-      ],
-      "options": [
-        "Berkebun",
-        "Bermain gitar",
-        "Bermain bola",
-        "Melukis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 1,
-      "hint": "Alat musik apa yang dimainkan dengan memetik senar?",
-      "chips": [
-        "membuat bunyi",
-        "memetik dawai",
-        "memainkan gitar"
-      ]
-    },
-    {
-      "clues": [
-        "Aku senang berada di kebun.",
-        "Aku memberi air pada sesuatu yang tumbuh di pot.",
-        "Daunnya menjadi segar setelah kurawat."
-      ],
-      "icons": [
-        "tanaman",
-        "raket",
-        "buku",
-        "gitar"
-      ],
-      "options": [
-        "Berkebun",
-        "Bulu tangkis",
-        "Membaca",
-        "Bermain gitar"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 0,
-      "hint": "Apa yang tumbuh di pot dan perlu disiram?",
-      "chips": [
-        "berada di kebun",
-        "memberi air",
-        "merawat tanaman"
-      ]
-    },
-    {
-      "clues": [
-        "Aku bermain bersama teman satu tim.",
-        "Kami berusaha memasukkan benda bulat ke gawang.",
-        "Benda itu kami tendang dengan kaki."
-      ],
-      "icons": [
-        "bola",
-        "kuas",
-        "buku",
-        "gitar"
-      ],
-      "options": [
-        "Bermain bola",
-        "Melukis",
-        "Membaca",
-        "Bermain gitar"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 0,
-      "hint": "Benda apa yang ditendang menuju gawang?",
-      "chips": [
-        "bermain satu tim",
-        "menendang benda bulat",
-        "memasukkan ke gawang"
-      ]
-    },
-    {
-      "clues": [
-        "Aku duduk di tempat yang tenang.",
-        "Aku melihat tulisan dan memahami ceritanya.",
-        "Benda yang kubaca punya banyak halaman."
-      ],
-      "icons": [
-        "buku",
-        "raket",
-        "tanaman",
-        "kuas"
-      ],
-      "options": [
-        "Membaca",
-        "Bulu tangkis",
-        "Berkebun",
-        "Melukis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 0,
-      "hint": "Apa yang dibaca dan memiliki banyak halaman?",
-      "chips": [
-        "duduk dengan tenang",
-        "memahami cerita",
-        "membaca buku"
-      ]
-    },
-    {
-      "clues": [
-        "Aku suka merawat sesuatu yang hidup.",
-        "Aku menanamnya di tanah yang subur.",
-        "Aku membersihkan daun dan memberi air."
-      ],
-      "icons": [
-        "tanaman",
-        "bola",
-        "gitar",
-        "raket"
-      ],
-      "options": [
-        "Berkebun",
-        "Bermain bola",
-        "Bermain gitar",
-        "Bulu tangkis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 0,
-      "hint": "Apa yang ditanam di tanah dan memiliki daun?",
-      "chips": [
-        "merawat yang hidup",
-        "menanam di tanah",
-        "membersihkan daun"
-      ]
-    },
-    {
-      "clues": [
-        "Aku suka tampil di depan keluarga.",
-        "Aku memainkan lagu dengan jari.",
-        "Alat musikku memiliki senar."
-      ],
-      "icons": [
-        "gitar",
-        "buku",
-        "kuas",
-        "tanaman"
-      ],
-      "options": [
-        "Bermain gitar",
-        "Membaca",
-        "Melukis",
-        "Berkebun"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 0,
-      "hint": "Alat apa yang mempunyai senar untuk dimainkan?",
-      "chips": [
-        "tampil di depan keluarga",
-        "memainkan lagu",
-        "memetik senar"
-      ]
-    },
-    {
-      "clues": [
-        "Aku membawa alat olahraga ke lapangan.",
-        "Aku berdiri dekat net.",
-        "Aku mengayunkan alat untuk memukul kok."
-      ],
-      "icons": [
-        "raket",
-        "bola",
-        "buku",
-        "tanaman"
-      ],
-      "options": [
-        "Bulu tangkis",
-        "Bermain bola",
-        "Membaca",
-        "Berkebun"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 0,
-      "hint": "Apa nama alat olahraga berjaring untuk memukul kok?",
-      "chips": [
-        "membawa alat olahraga",
-        "berdiri dekat net",
-        "mengayunkan raket"
-      ]
-    },
-    {
-      "clues": [
-        "Aku suka menggambar pemandangan.",
-        "Aku menyiapkan cat di atas palet.",
-        "Aku memakai alat kecil untuk membuat garis."
-      ],
-      "icons": [
-        "kuas",
-        "gitar",
-        "tanaman",
-        "raket"
-      ],
-      "options": [
-        "Melukis",
-        "Bermain gitar",
-        "Berkebun",
-        "Bulu tangkis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 0,
-      "hint": "Alat apa yang membantu membuat garis dengan cat?",
-      "chips": [
-        "menggambar pemandangan",
-        "menyiapkan cat",
-        "membuat garis dengan kuas"
-      ]
-    },
-    {
-      "clues": [
-        "Aku suka cerita tentang hewan.",
-        "Aku mencari kisah baru di rak.",
-        "Aku meminjam benda itu dari perpustakaan."
-      ],
-      "icons": [
-        "buku",
-        "bola",
-        "gitar",
-        "kuas"
-      ],
-      "options": [
-        "Membaca",
-        "Bermain bola",
-        "Bermain gitar",
-        "Melukis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 0,
-      "hint": "Benda apa yang dipinjam untuk dibaca?",
-      "chips": [
-        "suka cerita hewan",
-        "mencari kisah baru",
-        "meminjam buku"
-      ]
-    },
-    {
-      "clues": [
-        "Aku bermain di luar bersama teman.",
-        "Kami berlari mengejar benda yang ditendang.",
-        "Permainan kami mempunyai gawang."
-      ],
-      "icons": [
-        "bola",
-        "raket",
-        "tanaman",
-        "buku"
-      ],
-      "options": [
-        "Bermain bola",
-        "Bulu tangkis",
-        "Berkebun",
-        "Membaca"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 0,
-      "hint": "Benda apa yang dimainkan dengan cara ditendang?",
-      "chips": [
-        "bermain di luar",
-        "berlari mengejar",
-        "menendang bola"
-      ]
-    },
-    {
-      "clues": [
-        "Aku mendengarkan bunyi saat berlatih.",
-        "Aku menekan dan memetik beberapa senar.",
-        "Alat musik kayu itu sering dimainkan sambil bernyanyi."
-      ],
-      "icons": [
-        "gitar",
-        "kuas",
-        "raket",
-        "tanaman"
-      ],
-      "options": [
-        "Bermain gitar",
-        "Melukis",
-        "Bulu tangkis",
-        "Berkebun"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 0,
-      "hint": "Alat musik apa yang mengeluarkan nada dari senar?",
-      "chips": [
-        "mendengarkan bunyi",
-        "memetik beberapa senar",
-        "bernyanyi sambil bermain gitar"
-      ]
-    },
-    {
-      "clues": [
-        "Aku suka melihat bunga tumbuh.",
-        "Aku meletakkan bibit di dalam tanah.",
-        "Aku merawatnya dengan air dan sinar matahari."
-      ],
-      "icons": [
-        "tanaman",
-        "bola",
-        "buku",
-        "raket"
-      ],
-      "options": [
-        "Berkebun",
-        "Bermain bola",
-        "Membaca",
-        "Bulu tangkis"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 0,
-      "hint": "Apa yang tumbuh dari bibit dan perlu dirawat?",
-      "chips": [
-        "melihat bunga tumbuh",
-        "meletakkan bibit",
-        "merawat tanaman"
-      ]
-    },
-    {
-      "clues": [
-        "Aku berlatih olahraga dengan kakak.",
-        "Kami memakai kok dan net.",
-        "Alat yang kuayunkan memiliki permukaan berjaring."
-      ],
-      "icons": [
-        "raket",
-        "kuas",
-        "gitar",
-        "buku"
-      ],
-      "options": [
-        "Bulu tangkis",
-        "Melukis",
-        "Bermain gitar",
-        "Membaca"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 0,
-      "hint": "Alat berjaring apa yang dipakai dalam bulu tangkis?",
-      "chips": [
-        "berlatih olahraga",
-        "memakai kok dan net",
-        "mengayunkan raket"
-      ]
-    },
-    {
-      "clues": [
-        "Aku suka mewarnai gambar.",
-        "Aku mencelupkan alat ke dalam cat.",
-        "Ujung alat itu memiliki bulu halus."
-      ],
-      "icons": [
-        "kuas",
-        "tanaman",
-        "bola",
-        "buku"
-      ],
-      "options": [
-        "Melukis",
-        "Berkebun",
-        "Bermain bola",
-        "Membaca"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 0,
-      "hint": "Apa nama alat berbulu halus untuk melukis?",
-      "chips": [
-        "mewarnai gambar",
-        "mencelupkan ke cat",
-        "memakai kuas"
-      ]
-    },
-    {
-      "clues": [
-        "Aku belajar hal baru dari tulisan.",
-        "Aku membaca dari awal hingga akhir.",
-        "Aku menyimpan bacaan itu di rak setelah selesai."
-      ],
-      "icons": [
-        "buku",
-        "gitar",
-        "raket",
-        "bola"
-      ],
-      "options": [
-        "Membaca",
-        "Bermain gitar",
-        "Bulu tangkis",
-        "Bermain bola"
-      ],
-      "optionImages": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "answer": 0,
-      "hint": "Benda apa yang bisa dibaca lalu disimpan di rak?",
-      "chips": [
-        "belajar dari tulisan",
-        "membaca sampai selesai",
-        "menyimpan buku"
-      ]
-    }
-  ]
+    "appearance": {
+        "backgroundImage": "",
+        "introImage": "",
+        "detectiveImage": "",
+        "mapImage": ""
+    },
+    "questionCounts": {
+        "level1": 5,
+        "level2": 5,
+        "level3Sentences": 5,
+        "level3Pairs": 5,
+        "level4": 5
+    },
+    "levels": [
+        {
+            "title": "TKP: Jejak Hobi yang Hilang",
+            "place": "Taman Kota",
+            "skill": "Mengenali jenis hobi",
+            "prompt": ""
+        },
+        {
+            "title": "Rahasia di Balik Profil Warga",
+            "place": "Rumah Warga",
+            "skill": "Membaca dan memahami teks",
+            "prompt": "Apa hobi {name}?",
+            "secondaryPrompt": "Kalimat mana yang menjadi bukti hobi {name}?"
+        },
+        {
+            "title": "Papan Bukti Detektif",
+            "place": "Markas Detektif",
+            "skill": "Kosakata dan kalimat",
+            "prompt": "Susun kata-kata ini menjadi kalimat yang benar.",
+            "secondaryPrompt": "Pasangkan kata dengan maknanya. Ketuk kata, lalu ketuk maknanya."
+        },
+        {
+            "title": "Kasus Terakhir: Siapakah Aku?",
+            "place": "Balai Kota",
+            "skill": "Menarik kesimpulan",
+            "prompt": "Siapakah aku? Baca petunjuknya, lalu tebak hobi yang dimaksud."
+        }
+    ],
+    "level1": [
+        {
+            "q": "Hobi memainkan alat musik berdawai dengan cara menggesek busur disebut ....",
+            "hint": "Alat musik berdawai ini dimainkan dengan cara menggesekkan busur.",
+            "options": ["Bermain biola", "Bermain catur", "Menyelam"],
+            "icons": ["biola", "catur", "maskerselamdanskuba"],
+            "optionImages": [
+                "/images/benda/biola.jpg",
+                "/images/benda/catur.jpg",
+                "/images/benda/maskerselamdanskuba.jpg"
+            ],
+            "answer": 0
+        },
+        {
+            "q": "Hobi menyusun strategi dengan menggerakkan bidak di papan kotak-kotak disebut ....",
+            "hint": "Permainan ini menggunakan bidak di atas papan kotak-kotak.",
+            "options": ["Angkat beban", "Memasak", "Bermain catur"],
+            "icons": ["dumbel", "memasak", "catur"],
+            "optionImages": [
+                "/images/benda/dumbel.jpg",
+                "/images/benda/memasak.jpg",
+                "/images/benda/catur.jpg"
+            ],
+            "answer": 2
+        },
+        {
+            "q": "Olahraga mengangkat beban untuk melatih kekuatan otot disebut ....",
+            "hint": "Kegiatan olahraga ini melatih kekuatan dengan mengangkat dumbel.",
+            "options": ["Menjahit", "Angkat beban", "Bermain gim"],
+            "icons": ["menjahit", "dumbel", "gamer"],
+            "optionImages": [
+                "/images/benda/menjahit.jpg",
+                "/images/benda/dumbel.jpg",
+                "/images/benda/gamer.jpg"
+            ],
+            "answer": 1
+        },
+        {
+            "q": "Hobi memainkan permainan digital dengan alat pengendali disebut ....",
+            "hint": "Hobi ini dilakukan dengan memainkan permainan digital menggunakan pengendali.",
+            "options": ["Bermain gim", "Fotografi", "Menjahit dengan mesin"],
+            "icons": ["gamer", "kamera", "mesin jahit"],
+            "optionImages": [
+                "/images/benda/gamer.jpg",
+                "/images/benda/kamera.jpg",
+                "/images/benda/mesin%20jahit.jpg"
+            ],
+            "answer": 0
+        },
+        {
+            "q": "Hobi mengabadikan pemandangan dan peristiwa menggunakan kamera disebut ....",
+            "hint": "Dengan alat ini kita mengambil gambar dan mengatur fokus.",
+            "options": ["Pramuka", "Memanah", "Fotografi"],
+            "icons": ["kompas dan pita", "panah", "kamera"],
+            "optionImages": [
+                "/images/benda/kompas%20dan%20pita.jpg",
+                "/images/benda/panah.jpg",
+                "/images/benda/kamera.jpg"
+            ],
+            "answer": 2
+        },
+        {
+            "q": "Kegiatan menjelajah dan belajar keterampilan bersama regu disebut ....",
+            "hint": "Dalam kegiatan ini kompas membantu menentukan arah saat menjelajah.",
+            "options": ["Memancing", "Pramuka", "Melukis"],
+            "icons": ["pancing", "kompas dan pita", "kuas"],
+            "optionImages": [
+                "/images/benda/pancing.jpg",
+                "/images/benda/kompas%20dan%20pita.jpg",
+                "/images/benda/kuas.jpg"
+            ],
+            "answer": 1
+        },
+        {
+            "q": "Kegiatan membuat gambar dengan mengoleskan cat pada kertas atau kanvas disebut ....",
+            "hint": "Kuas digunakan untuk mengoleskan cat pada kanvas atau kertas.",
+            "options": ["Melukis", "Menyelam", "Kaligrafi"],
+            "icons": ["kuas", "maskerselamdanskuba", "pen dan tinta"],
+            "optionImages": [
+                "/images/benda/kuas.jpg",
+                "/images/benda/maskerselamdanskuba.jpg",
+                "/images/benda/pen%20dan%20tinta.jpg"
+            ],
+            "answer": 0
+        },
+        {
+            "q": "Kegiatan menjelajahi bawah air dengan masker dan tabung udara disebut ....",
+            "hint": "Masker dan tabung udara membantu kita melihat serta bernapas di bawah air.",
+            "options": ["Memasak", "Membuat keramik", "Menyelam"],
+            "icons": ["memasak", "roda pemutar keramik", "maskerselamdanskuba"],
+            "optionImages": [
+                "/images/benda/memasak.jpg",
+                "/images/benda/roda%20pemutar%20keramik.jpg",
+                "/images/benda/maskerselamdanskuba.jpg"
+            ],
+            "answer": 2
+        },
+        {
+            "q": "Kegiatan mengolah bahan makanan hingga menjadi hidangan disebut ....",
+            "hint": "Bahan makanan diolah dengan alat dapur hingga menjadi hidangan.",
+            "options": ["Bermain sepatu roda", "Memasak", "Menjahit"],
+            "icons": ["sepatu roda", "memasak", "menjahit"],
+            "optionImages": [
+                "/images/benda/sepatu%20roda.jpg",
+                "/images/benda/memasak.jpg",
+                "/images/benda/menjahit.jpg"
+            ],
+            "answer": 1
+        },
+        {
+            "q": "Kegiatan menyatukan potongan kain menggunakan jarum dan benang disebut ....",
+            "hint": "Jarum dan benang digunakan untuk menyatukan potongan kain.",
+            "options": [
+                "Menjahit",
+                "Menjahit dengan mesin",
+                "Bermain skateboard"
+            ],
+            "icons": ["menjahit", "mesin jahit", "skateboard"],
+            "optionImages": [
+                "/images/benda/menjahit.jpg",
+                "/images/benda/mesin%20jahit.jpg",
+                "/images/benda/skateboard.jpg"
+            ],
+            "answer": 0
+        },
+        {
+            "q": "Kegiatan menjahit kain dengan bantuan mesin dan pedal disebut ....",
+            "hint": "Mesin ini membantu menjahit kain dengan jahitan yang rapi.",
+            "options": ["Memanah", "Berkebun", "Menjahit dengan mesin"],
+            "icons": ["panah", "skop", "mesin jahit"],
+            "optionImages": [
+                "/images/benda/panah.jpg",
+                "/images/benda/skop.jpg",
+                "/images/benda/mesin%20jahit.jpg"
+            ],
+            "answer": 2
+        },
+        {
+            "q": "Olahraga membidik sasaran dengan busur dan anak panah disebut ....",
+            "hint": "Anak panah dilepaskan dengan busur menuju sasaran.",
+            "options": ["Astronomi", "Memanah", "Memancing"],
+            "icons": ["teleskop", "panah", "pancing"],
+            "optionImages": [
+                "/images/benda/teleskop.jpg",
+                "/images/benda/panah.jpg",
+                "/images/benda/pancing.jpg"
+            ],
+            "answer": 1
+        },
+        {
+            "q": "Kegiatan menunggu ikan dengan alat bertali dan kail disebut ....",
+            "hint": "Tali dan kail digunakan untuk menangkap ikan dengan alat ini.",
+            "options": ["Memancing", "Kaligrafi", "Bermain ukulele"],
+            "icons": ["pancing", "pen dan tinta", "ukulele"],
+            "optionImages": [
+                "/images/benda/pancing.jpg",
+                "/images/benda/pen%20dan%20tinta.jpg",
+                "/images/benda/ukulele.jpg"
+            ],
+            "answer": 0
+        },
+        {
+            "q": "Seni menulis huruf dengan bentuk indah menggunakan pena dan tinta disebut ....",
+            "hint": "Pena dan tinta dipakai untuk menulis huruf dengan bentuk indah.",
+            "options": ["Membuat keramik", "Bermain biola", "Kaligrafi"],
+            "icons": ["roda pemutar keramik", "biola", "pen dan tinta"],
+            "optionImages": [
+                "/images/benda/roda%20pemutar%20keramik.jpg",
+                "/images/benda/biola.jpg",
+                "/images/benda/pen%20dan%20tinta.jpg"
+            ],
+            "answer": 2
+        },
+        {
+            "q": "Kegiatan membentuk tanah liat menjadi benda di atas roda putar disebut ....",
+            "hint": "Tanah liat dibentuk di atas roda yang berputar.",
+            "options": [
+                "Bermain catur",
+                "Membuat keramik",
+                "Bermain sepatu roda"
+            ],
+            "icons": ["catur", "roda pemutar keramik", "sepatu roda"],
+            "optionImages": [
+                "/images/benda/catur.jpg",
+                "/images/benda/roda%20pemutar%20keramik.jpg",
+                "/images/benda/sepatu%20roda.jpg"
+            ],
+            "answer": 1
+        },
+        {
+            "q": "Kegiatan meluncur menggunakan sepatu yang memiliki roda disebut ....",
+            "hint": "Sepatu beroda membuat kita dapat meluncur di permukaan yang rata.",
+            "options": [
+                "Bermain sepatu roda",
+                "Bermain skateboard",
+                "Angkat beban"
+            ],
+            "icons": ["sepatu roda", "skateboard", "dumbel"],
+            "optionImages": [
+                "/images/benda/sepatu%20roda.jpg",
+                "/images/benda/skateboard.jpg",
+                "/images/benda/dumbel.jpg"
+            ],
+            "answer": 0
+        },
+        {
+            "q": "Olahraga meluncur sambil berdiri di atas papan beroda disebut ....",
+            "hint": "Papan beroda ini dinaiki sambil menjaga keseimbangan.",
+            "options": ["Berkebun", "Bermain gim", "Bermain skateboard"],
+            "icons": ["skop", "gamer", "skateboard"],
+            "optionImages": [
+                "/images/benda/skop.jpg",
+                "/images/benda/gamer.jpg",
+                "/images/benda/skateboard.jpg"
+            ],
+            "answer": 2
+        },
+        {
+            "q": "Kegiatan menanam dan merawat tumbuhan, sering kali dengan bantuan sekop disebut ....",
+            "hint": "Sekop membantu menggemburkan tanah dan menanam bibit.",
+            "options": ["Fotografi", "Berkebun", "Astronomi"],
+            "icons": ["kamera", "skop", "teleskop"],
+            "optionImages": [
+                "/images/benda/kamera.jpg",
+                "/images/benda/skop.jpg",
+                "/images/benda/teleskop.jpg"
+            ],
+            "answer": 1
+        },
+        {
+            "q": "Hobi mengamati bulan dan benda langit menggunakan teleskop disebut ....",
+            "hint": "Alat ini membantu melihat benda langit yang jauh.",
+            "options": ["Astronomi", "Bermain ukulele", "Pramuka"],
+            "icons": ["teleskop", "ukulele", "kompas dan pita"],
+            "optionImages": [
+                "/images/benda/teleskop.jpg",
+                "/images/benda/ukulele.jpg",
+                "/images/benda/kompas%20dan%20pita.jpg"
+            ],
+            "answer": 0
+        },
+        {
+            "q": "Hobi memainkan alat musik kecil berdawai dengan cara dipetik disebut ....",
+            "hint": "Alat musik kecil berdawai ini dimainkan dengan cara dipetik.",
+            "options": ["Bermain biola", "Melukis", "Bermain ukulele"],
+            "icons": ["biola", "kuas", "ukulele"],
+            "optionImages": [
+                "/images/benda/biola.jpg",
+                "/images/benda/kuas.jpg",
+                "/images/benda/ukulele.jpg"
+            ],
+            "answer": 2
+        }
+    ],
+    "level2": [
+        {
+            "name": "Dinda",
+            "look": {
+                "skin": "#f4c7a0",
+                "hair": "#3b2a20",
+                "shirt": "#17b3a3"
+            },
+            "sentences": [
+                "Dinda mengikuti latihan musik setiap sore.",
+                "Ia menggesek dawai dengan busur kecil.",
+                "Alunan biolanya terdengar merdu."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Bermain gim", "Memanah", "Bermain biola"],
+            "icons": ["gamer", "panah", "biola"],
+            "optionImages": [
+                "/images/benda/gamer.jpg",
+                "/images/benda/panah.jpg",
+                "/images/benda/biola.jpg"
+            ],
+            "answer": 2
+        },
+        {
+            "name": "Raka",
+            "look": {
+                "skin": "#e8b48c",
+                "hair": "#1e2a4a",
+                "shirt": "#ff6f61"
+            },
+            "sentences": [
+                "Raka menata bidak hitam dan putih.",
+                "Ia memikirkan langkah sebelum menggerakkan raja.",
+                "Raka bermain di papan kotak-kotak."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Memancing", "Bermain catur", "Fotografi"],
+            "icons": ["pancing", "catur", "kamera"],
+            "optionImages": [
+                "/images/benda/pancing.jpg",
+                "/images/benda/catur.jpg",
+                "/images/benda/kamera.jpg"
+            ],
+            "answer": 1
+        },
+        {
+            "name": "Budi",
+            "look": {
+                "skin": "#d9a37a",
+                "hair": "#222222",
+                "shirt": "#7a5cff"
+            },
+            "sentences": [
+                "Budi berlatih di tempat kebugaran.",
+                "Ia mengangkat dumbel dengan kedua tangan.",
+                "Budi mengulang gerakan agar ototnya kuat."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Angkat beban", "Pramuka", "Kaligrafi"],
+            "icons": ["dumbel", "kompas dan pita", "pen dan tinta"],
+            "optionImages": [
+                "/images/benda/dumbel.jpg",
+                "/images/benda/kompas%20dan%20pita.jpg",
+                "/images/benda/pen%20dan%20tinta.jpg"
+            ],
+            "answer": 0
+        },
+        {
+            "name": "Seno",
+            "look": {
+                "skin": "#f0c49f",
+                "hair": "#5a3828",
+                "shirt": "#f28b64"
+            },
+            "sentences": [
+                "Seno duduk di depan layar setelah belajar.",
+                "Ia menekan tombol pada alat pengendali.",
+                "Seno memainkan gim petualangan."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Melukis", "Membuat keramik", "Bermain gim"],
+            "icons": ["kuas", "roda pemutar keramik", "gamer"],
+            "optionImages": [
+                "/images/benda/kuas.jpg",
+                "/images/benda/roda%20pemutar%20keramik.jpg",
+                "/images/benda/gamer.jpg"
+            ],
+            "answer": 2
+        },
+        {
+            "name": "Mira",
+            "look": {
+                "skin": "#d9a37a",
+                "hair": "#302820",
+                "shirt": "#4c9db5"
+            },
+            "sentences": [
+                "Mira membawa kamera saat berjalan-jalan.",
+                "Ia mengatur fokus sebelum menekan tombol.",
+                "Mira memotret bunga di taman."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Bermain sepatu roda", "Fotografi", "Menyelam"],
+            "icons": ["sepatu roda", "kamera", "maskerselamdanskuba"],
+            "optionImages": [
+                "/images/benda/sepatu%20roda.jpg",
+                "/images/benda/kamera.jpg",
+                "/images/benda/maskerselamdanskuba.jpg"
+            ],
+            "answer": 1
+        },
+        {
+            "name": "Tono",
+            "look": {
+                "skin": "#e8b48c",
+                "hair": "#302820",
+                "shirt": "#d979a7"
+            },
+            "sentences": [
+                "Tono mengikuti kegiatan di alam bersama regunya.",
+                "Ia memakai kompas untuk menentukan arah.",
+                "Regu Tono mengukur jarak dengan pita ukur."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Pramuka", "Memasak", "Bermain skateboard"],
+            "icons": ["kompas dan pita", "memasak", "skateboard"],
+            "optionImages": [
+                "/images/benda/kompas%20dan%20pita.jpg",
+                "/images/benda/memasak.jpg",
+                "/images/benda/skateboard.jpg"
+            ],
+            "answer": 0
+        },
+        {
+            "name": "Sari",
+            "look": {
+                "skin": "#f4c7a0",
+                "hair": "#4c3429",
+                "shirt": "#79ad64"
+            },
+            "sentences": [
+                "Sari menyiapkan cat dan selembar kertas.",
+                "Ia mencelupkan kuas ke warna biru.",
+                "Sari membuat lukisan pemandangan."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Menjahit", "Berkebun", "Melukis"],
+            "icons": ["menjahit", "skop", "kuas"],
+            "optionImages": [
+                "/images/benda/menjahit.jpg",
+                "/images/benda/skop.jpg",
+                "/images/benda/kuas.jpg"
+            ],
+            "answer": 2
+        },
+        {
+            "name": "Ari",
+            "look": {
+                "skin": "#d9a37a",
+                "hair": "#241e1a",
+                "shirt": "#8b78ce"
+            },
+            "sentences": [
+                "Ari memakai masker dan tabung udara.",
+                "Ia memeriksa perlengkapan sebelum masuk ke air.",
+                "Ari mengamati ikan di bawah permukaan laut."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Astronomi", "Menyelam", "Menjahit dengan mesin"],
+            "icons": ["teleskop", "maskerselamdanskuba", "mesin jahit"],
+            "optionImages": [
+                "/images/benda/teleskop.jpg",
+                "/images/benda/maskerselamdanskuba.jpg",
+                "/images/benda/mesin%20jahit.jpg"
+            ],
+            "answer": 1
+        },
+        {
+            "name": "Lina",
+            "look": {
+                "skin": "#e8b48c",
+                "hair": "#33251e",
+                "shirt": "#e2ad45"
+            },
+            "sentences": [
+                "Lina membaca resep sebelum mulai.",
+                "Ia mencampur bahan lalu memasaknya di dapur.",
+                "Lina menyajikan hidangan untuk keluarga."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Memasak", "Memanah", "Bermain ukulele"],
+            "icons": ["memasak", "panah", "ukulele"],
+            "optionImages": [
+                "/images/benda/memasak.jpg",
+                "/images/benda/panah.jpg",
+                "/images/benda/ukulele.jpg"
+            ],
+            "answer": 0
+        },
+        {
+            "name": "Ayu",
+            "look": {
+                "skin": "#f4c7a0",
+                "hair": "#5a3828",
+                "shirt": "#5caa9a"
+            },
+            "sentences": [
+                "Ayu memilih kain bermotif bunga.",
+                "Ia memasukkan benang ke lubang jarum.",
+                "Ayu menjahit kain dengan tusuk tangan."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Memancing", "Bermain biola", "Menjahit"],
+            "icons": ["pancing", "biola", "menjahit"],
+            "optionImages": [
+                "/images/benda/pancing.jpg",
+                "/images/benda/biola.jpg",
+                "/images/benda/menjahit.jpg"
+            ],
+            "answer": 2
+        },
+        {
+            "name": "Nisa",
+            "look": {
+                "skin": "#d9a37a",
+                "hair": "#302820",
+                "shirt": "#e67759"
+            },
+            "sentences": [
+                "Nisa merapikan kain di atas meja.",
+                "Ia menginjak pedal mesin jahit perlahan.",
+                "Nisa membuat jahitan lurus pada kain."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Bermain catur", "Menjahit dengan mesin", "Kaligrafi"],
+            "icons": ["catur", "mesin jahit", "pen dan tinta"],
+            "optionImages": [
+                "/images/benda/catur.jpg",
+                "/images/benda/mesin%20jahit.jpg",
+                "/images/benda/pen%20dan%20tinta.jpg"
+            ],
+            "answer": 1
+        },
+        {
+            "name": "Fikri",
+            "look": {
+                "skin": "#e8b48c",
+                "hair": "#39271f",
+                "shirt": "#62a7d6"
+            },
+            "sentences": [
+                "Fikri berdiri di garis latihan.",
+                "Ia menarik tali busur sambil membidik sasaran.",
+                "Anak panah Fikri melesat ke tengah target."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Memanah", "Membuat keramik", "Angkat beban"],
+            "icons": ["panah", "roda pemutar keramik", "dumbel"],
+            "optionImages": [
+                "/images/benda/panah.jpg",
+                "/images/benda/roda%20pemutar%20keramik.jpg",
+                "/images/benda/dumbel.jpg"
+            ],
+            "answer": 0
+        },
+        {
+            "name": "Doni",
+            "look": {
+                "skin": "#f4c7a0",
+                "hair": "#302820",
+                "shirt": "#8b78ce"
+            },
+            "sentences": [
+                "Doni duduk tenang di tepi kolam.",
+                "Ia memasang umpan pada kail pancing.",
+                "Doni menunggu ikan menyentuh umpannya."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Bermain sepatu roda", "Bermain gim", "Memancing"],
+            "icons": ["sepatu roda", "gamer", "pancing"],
+            "optionImages": [
+                "/images/benda/sepatu%20roda.jpg",
+                "/images/benda/gamer.jpg",
+                "/images/benda/pancing.jpg"
+            ],
+            "answer": 2
+        },
+        {
+            "name": "Salma",
+            "look": {
+                "skin": "#d9a37a",
+                "hair": "#5a3828",
+                "shirt": "#d979a7"
+            },
+            "sentences": [
+                "Salma menyiapkan pena dan tinta hitam.",
+                "Ia menggoreskan pena dengan hati-hati.",
+                "Salma menghias tulisan menjadi karya yang indah."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Fotografi", "Kaligrafi", "Bermain skateboard"],
+            "icons": ["kamera", "pen dan tinta", "skateboard"],
+            "optionImages": [
+                "/images/benda/kamera.jpg",
+                "/images/benda/pen%20dan%20tinta.jpg",
+                "/images/benda/skateboard.jpg"
+            ],
+            "answer": 1
+        },
+        {
+            "name": "Made",
+            "look": {
+                "skin": "#e8b48c",
+                "hair": "#302820",
+                "shirt": "#4c9db5"
+            },
+            "sentences": [
+                "Made membasahi tanah liat sebelum bekerja.",
+                "Ia membentuk tanah liat di atas roda putar.",
+                "Made membuat sebuah mangkuk keramik."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Membuat keramik", "Berkebun", "Pramuka"],
+            "icons": ["roda pemutar keramik", "skop", "kompas dan pita"],
+            "optionImages": [
+                "/images/benda/roda%20pemutar%20keramik.jpg",
+                "/images/benda/skop.jpg",
+                "/images/benda/kompas%20dan%20pita.jpg"
+            ],
+            "answer": 0
+        },
+        {
+            "name": "Rani",
+            "look": {
+                "skin": "#f4c7a0",
+                "hair": "#33251e",
+                "shirt": "#79ad64"
+            },
+            "sentences": [
+                "Rani memakai pelindung sebelum berlatih.",
+                "Ia mendorong tubuhnya agar meluncur.",
+                "Rani berputar dengan sepatu beroda di lintasan."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Astronomi", "Melukis", "Bermain sepatu roda"],
+            "icons": ["teleskop", "kuas", "sepatu roda"],
+            "optionImages": [
+                "/images/benda/teleskop.jpg",
+                "/images/benda/kuas.jpg",
+                "/images/benda/sepatu%20roda.jpg"
+            ],
+            "answer": 2
+        },
+        {
+            "name": "Bima",
+            "look": {
+                "skin": "#d9a37a",
+                "hair": "#241e1a",
+                "shirt": "#e2ad45"
+            },
+            "sentences": [
+                "Bima memakai helm sebelum berlatih.",
+                "Ia menaiki papan beroda dengan satu kaki.",
+                "Bima meluncur lalu berlatih berbelok."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Menyelam", "Bermain skateboard", "Bermain ukulele"],
+            "icons": ["maskerselamdanskuba", "skateboard", "ukulele"],
+            "optionImages": [
+                "/images/benda/maskerselamdanskuba.jpg",
+                "/images/benda/skateboard.jpg",
+                "/images/benda/ukulele.jpg"
+            ],
+            "answer": 1
+        },
+        {
+            "name": "Wulan",
+            "look": {
+                "skin": "#e8b48c",
+                "hair": "#5a3828",
+                "shirt": "#e67759"
+            },
+            "sentences": [
+                "Wulan menyiapkan sekop kecil dan bibit.",
+                "Ia menggemburkan tanah di dalam pot.",
+                "Wulan menanam bunga lalu menyiramnya."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Berkebun", "Bermain biola", "Memasak"],
+            "icons": ["skop", "biola", "memasak"],
+            "optionImages": [
+                "/images/benda/skop.jpg",
+                "/images/benda/biola.jpg",
+                "/images/benda/memasak.jpg"
+            ],
+            "answer": 0
+        },
+        {
+            "name": "Intan",
+            "look": {
+                "skin": "#f4c7a0",
+                "hair": "#302820",
+                "shirt": "#62a7d6"
+            },
+            "sentences": [
+                "Intan mengamati langit saat malam cerah.",
+                "Ia mengarahkan teleskop ke arah bulan.",
+                "Intan mencatat benda langit yang terlihat."
+            ],
+            "evidence": [0, 1, 2],
+            "options": ["Bermain catur", "Menjahit", "Astronomi"],
+            "icons": ["catur", "menjahit", "teleskop"],
+            "optionImages": [
+                "/images/benda/catur.jpg",
+                "/images/benda/menjahit.jpg",
+                "/images/benda/teleskop.jpg"
+            ],
+            "answer": 2
+        },
+        {
+            "name": "Yuni",
+            "look": {
+                "skin": "#d9a37a",
+                "hair": "#39271f",
+                "shirt": "#5caa9a"
+            },
+            "sentences": [
+                "Yuni membawa ukulele kecil ke teras.",
+                "Ia memetik dawai mengikuti irama lagu.",
+                "Yuni bernyanyi sambil memainkan musik."
+            ],
+            "evidence": [0, 1, 2],
+            "options": [
+                "Menjahit dengan mesin",
+                "Bermain ukulele",
+                "Angkat beban"
+            ],
+            "icons": ["mesin jahit", "ukulele", "dumbel"],
+            "optionImages": [
+                "/images/benda/mesin%20jahit.jpg",
+                "/images/benda/ukulele.jpg",
+                "/images/benda/dumbel.jpg"
+            ],
+            "answer": 1
+        }
+    ],
+    "level3Sentences": [
+        {
+            "words": "memainkan biola Dinda suka",
+            "answers": ["Dinda suka memainkan biola"]
+        },
+        {
+            "words": "bermain catur Raka menyusun strategi saat",
+            "answers": ["Raka menyusun strategi saat bermain catur"]
+        },
+        {
+            "words": "mengangkat dumbel Budi berlatih",
+            "answers": ["Budi berlatih mengangkat dumbel"]
+        },
+        {
+            "words": "setelah belajar Seno bermain gim",
+            "answers": ["Seno bermain gim setelah belajar"]
+        },
+        {
+            "words": "dengan kamera Mira suka memotret bunga",
+            "answers": ["Mira suka memotret bunga dengan kamera"]
+        },
+        {
+            "words": "saat pramuka Tono belajar memakai kompas",
+            "answers": ["Tono belajar memakai kompas saat pramuka"]
+        },
+        {
+            "words": "dengan kuas Sari melukis pemandangan",
+            "answers": ["Sari melukis pemandangan dengan kuas"]
+        },
+        {
+            "words": "saat menyelam Ari mengamati ikan",
+            "answers": ["Ari mengamati ikan saat menyelam"]
+        },
+        {
+            "words": "untuk keluarga Lina memasak hidangan",
+            "answers": ["Lina memasak hidangan untuk keluarga"]
+        },
+        {
+            "words": "dengan jarum Ayu menjahit kain",
+            "answers": ["Ayu menjahit kain dengan jarum"]
+        },
+        {
+            "words": "dengan mesin Nisa menjahit kain",
+            "answers": ["Nisa menjahit kain dengan mesin"]
+        },
+        {
+            "words": "saat memanah Fikri membidik sasaran",
+            "answers": ["Fikri membidik sasaran saat memanah"]
+        },
+        {
+            "words": "saat memancing Doni menunggu ikan",
+            "answers": ["Doni menunggu ikan saat memancing"]
+        },
+        {
+            "words": "dengan pena Salma menulis huruf indah",
+            "answers": ["Salma menulis huruf indah dengan pena"]
+        },
+        {
+            "words": "menjadi keramik Made membentuk tanah liat",
+            "answers": ["Made membentuk tanah liat menjadi keramik"]
+        },
+        {
+            "words": "sepatu roda Rani meluncur memakai",
+            "answers": ["Rani meluncur memakai sepatu roda"]
+        },
+        {
+            "words": "papan skateboard Bima meluncur dengan",
+            "answers": ["Bima meluncur dengan papan skateboard"]
+        },
+        {
+            "words": "di kebun Wulan menanam bunga",
+            "answers": ["Wulan menanam bunga di kebun"]
+        },
+        {
+            "words": "dengan teleskop Intan mengamati bulan",
+            "answers": ["Intan mengamati bulan dengan teleskop"]
+        },
+        {
+            "words": "sambil bernyanyi Yuni memainkan ukulele",
+            "answers": ["Yuni memainkan ukulele sambil bernyanyi"]
+        }
+    ],
+    "level3Pairs": [
+        {
+            "term": "Busur biola",
+            "meaning": "Tongkat berbulu yang digesekkan pada dawai biola"
+        },
+        {
+            "term": "Bidak",
+            "meaning": "Buah permainan yang digerakkan di atas papan catur"
+        },
+        {
+            "term": "Dumbel",
+            "meaning": "Alat beban kecil yang diangkat dengan satu tangan"
+        },
+        {
+            "term": "Pengendali",
+            "meaning": "Alat bertombol untuk mengatur permainan digital"
+        },
+        {
+            "term": "Fokus",
+            "meaning": "Bagian gambar yang dibuat tampak jelas oleh kamera"
+        },
+        {
+            "term": "Kompas",
+            "meaning": "Alat untuk menunjukkan arah mata angin"
+        },
+        {
+            "term": "Kuas",
+            "meaning": "Alat berbulu untuk mengoleskan cat"
+        },
+        {
+            "term": "Tabung selam",
+            "meaning": "Tabung berisi udara untuk membantu bernapas di bawah air"
+        },
+        {
+            "term": "Resep",
+            "meaning": "Petunjuk bahan dan langkah untuk membuat makanan"
+        },
+        {
+            "term": "Benang",
+            "meaning": "Serat panjang yang digunakan bersama jarum untuk menjahit"
+        },
+        {
+            "term": "Pedal mesin jahit",
+            "meaning": "Bagian yang diinjak untuk menggerakkan mesin jahit"
+        },
+        {
+            "term": "Busur",
+            "meaning": "Alat melengkung untuk melontarkan anak panah"
+        },
+        {
+            "term": "Kail",
+            "meaning": "Bagian melengkung pada alat pancing untuk menangkap ikan"
+        },
+        {
+            "term": "Tinta",
+            "meaning": "Cairan berwarna yang digunakan untuk menulis atau menggambar"
+        },
+        {
+            "term": "Tanah liat",
+            "meaning": "Bahan lunak yang dapat dibentuk menjadi keramik"
+        },
+        {
+            "term": "Pelindung lutut",
+            "meaning": "Perlengkapan untuk melindungi lutut saat berolahraga"
+        },
+        {
+            "term": "Skateboard",
+            "meaning": "Papan kecil beroda yang dinaiki untuk meluncur"
+        },
+        {
+            "term": "Sekop",
+            "meaning": "Alat untuk menggali atau memindahkan tanah"
+        },
+        {
+            "term": "Teleskop",
+            "meaning": "Alat untuk melihat benda yang sangat jauh dengan lebih jelas"
+        },
+        {
+            "term": "Dawai",
+            "meaning": "Kawat atau tali pada alat musik yang bergetar menghasilkan nada"
+        }
+    ],
+    "level4": [
+        {
+            "clues": [
+                "Aku berlatih memainkan alat musik berdawai.",
+                "Aku menggesek dawai menggunakan busur.",
+                "Alat musikku menghasilkan nada yang merdu."
+            ],
+            "options": ["Kaligrafi", "Bermain biola", "Melukis"],
+            "icons": ["pen dan tinta", "biola", "kuas"],
+            "optionImages": [
+                "/images/benda/pen%20dan%20tinta.jpg",
+                "/images/benda/biola.jpg",
+                "/images/benda/kuas.jpg"
+            ],
+            "answer": 1,
+            "hint": "Alat musik apa yang dimainkan dengan busur?",
+            "chips": [
+                "alat musik berdawai",
+                "menggesek dengan busur",
+                "menghasilkan melodi"
+            ]
+        },
+        {
+            "clues": [
+                "Aku bermain menggunakan bidak hitam dan putih.",
+                "Aku menyusun strategi sebelum melangkah.",
+                "Permainanku berlangsung di atas papan kotak-kotak."
+            ],
+            "options": ["Bermain catur", "Menyelam", "Membuat keramik"],
+            "icons": ["catur", "maskerselamdanskuba", "roda pemutar keramik"],
+            "optionImages": [
+                "/images/benda/catur.jpg",
+                "/images/benda/maskerselamdanskuba.jpg",
+                "/images/benda/roda%20pemutar%20keramik.jpg"
+            ],
+            "answer": 0,
+            "hint": "Permainan apa yang memakai bidak dan papan kotak-kotak?",
+            "chips": [
+                "bidak hitam dan putih",
+                "menyusun strategi",
+                "papan kotak-kotak"
+            ]
+        },
+        {
+            "clues": [
+                "Aku berlatih untuk menguatkan otot.",
+                "Aku mengangkat beban dengan kedua tangan.",
+                "Alat latihanku berupa dumbel."
+            ],
+            "options": ["Memasak", "Bermain sepatu roda", "Angkat beban"],
+            "icons": ["memasak", "sepatu roda", "dumbel"],
+            "optionImages": [
+                "/images/benda/memasak.jpg",
+                "/images/benda/sepatu%20roda.jpg",
+                "/images/benda/dumbel.jpg"
+            ],
+            "answer": 2,
+            "hint": "Olahraga apa yang menggunakan dumbel untuk melatih otot?",
+            "chips": [
+                "melatih kekuatan otot",
+                "mengangkat beban",
+                "menggunakan dumbel"
+            ]
+        },
+        {
+            "clues": [
+                "Aku memainkan permainan digital.",
+                "Aku menekan tombol pada alat pengendali.",
+                "Permainanku terlihat pada layar."
+            ],
+            "options": ["Bermain skateboard", "Bermain gim", "Menjahit"],
+            "icons": ["skateboard", "gamer", "menjahit"],
+            "optionImages": [
+                "/images/benda/skateboard.jpg",
+                "/images/benda/gamer.jpg",
+                "/images/benda/menjahit.jpg"
+            ],
+            "answer": 1,
+            "hint": "Permainan apa yang dimainkan menggunakan pengendali dan layar?",
+            "chips": [
+                "permainan digital",
+                "menekan tombol pengendali",
+                "bermain di layar"
+            ]
+        },
+        {
+            "clues": [
+                "Aku senang mengabadikan pemandangan.",
+                "Aku mengatur fokus pada sebuah objek.",
+                "Aku menekan tombol kamera untuk mengambil gambar."
+            ],
+            "options": ["Fotografi", "Menjahit dengan mesin", "Berkebun"],
+            "icons": ["kamera", "mesin jahit", "skop"],
+            "optionImages": [
+                "/images/benda/kamera.jpg",
+                "/images/benda/mesin%20jahit.jpg",
+                "/images/benda/skop.jpg"
+            ],
+            "answer": 0,
+            "hint": "Hobi apa yang menggunakan kamera untuk mengambil gambar?",
+            "chips": [
+                "mengabadikan pemandangan",
+                "mengatur fokus",
+                "mengambil gambar"
+            ]
+        },
+        {
+            "clues": [
+                "Aku mengikuti kegiatan bersama sebuah regu.",
+                "Aku menggunakan kompas untuk mencari arah.",
+                "Aku belajar keterampilan saat menjelajah alam."
+            ],
+            "options": ["Memanah", "Astronomi", "Pramuka"],
+            "icons": ["panah", "teleskop", "kompas dan pita"],
+            "optionImages": [
+                "/images/benda/panah.jpg",
+                "/images/benda/teleskop.jpg",
+                "/images/benda/kompas%20dan%20pita.jpg"
+            ],
+            "answer": 2,
+            "hint": "Kegiatan berregu apa yang menggunakan kompas saat menjelajah?",
+            "chips": [
+                "kegiatan bersama regu",
+                "menentukan arah dengan kompas",
+                "menjelajah alam"
+            ]
+        },
+        {
+            "clues": [
+                "Aku membuat gambar menggunakan cat.",
+                "Aku mengoleskan warna dengan kuas.",
+                "Karyaku dapat dibuat di atas kertas atau kanvas."
+            ],
+            "options": ["Bermain ukulele", "Melukis", "Memancing"],
+            "icons": ["ukulele", "kuas", "pancing"],
+            "optionImages": [
+                "/images/benda/ukulele.jpg",
+                "/images/benda/kuas.jpg",
+                "/images/benda/pancing.jpg"
+            ],
+            "answer": 1,
+            "hint": "Hobi apa yang membuat gambar dengan cat dan kuas?",
+            "chips": [
+                "membuat gambar",
+                "menggunakan cat",
+                "mengoleskan warna dengan kuas"
+            ]
+        },
+        {
+            "clues": [
+                "Aku menjelajahi dunia di bawah permukaan air.",
+                "Aku memakai masker dan tabung udara.",
+                "Aku dapat melihat ikan saat berada di bawah laut."
+            ],
+            "options": ["Menyelam", "Kaligrafi", "Bermain biola"],
+            "icons": ["maskerselamdanskuba", "pen dan tinta", "biola"],
+            "optionImages": [
+                "/images/benda/maskerselamdanskuba.jpg",
+                "/images/benda/pen%20dan%20tinta.jpg",
+                "/images/benda/biola.jpg"
+            ],
+            "answer": 0,
+            "hint": "Kegiatan apa yang memakai tabung udara untuk menjelajahi bawah air?",
+            "chips": [
+                "menjelajahi bawah air",
+                "memakai masker dan tabung",
+                "mengamati ikan"
+            ]
+        },
+        {
+            "clues": [
+                "Aku mengolah bahan makanan.",
+                "Aku mengikuti resep dan menggunakan alat dapur.",
+                "Hasil kegiatanku dapat disajikan sebagai hidangan."
+            ],
+            "options": ["Membuat keramik", "Bermain catur", "Memasak"],
+            "icons": ["roda pemutar keramik", "catur", "memasak"],
+            "optionImages": [
+                "/images/benda/roda%20pemutar%20keramik.jpg",
+                "/images/benda/catur.jpg",
+                "/images/benda/memasak.jpg"
+            ],
+            "answer": 2,
+            "hint": "Hobi apa yang mengolah bahan makanan menjadi hidangan?",
+            "chips": [
+                "mengolah bahan makanan",
+                "mengikuti resep",
+                "menyajikan hidangan"
+            ]
+        },
+        {
+            "clues": [
+                "Aku membuat atau memperbaiki benda dari kain.",
+                "Aku menggunakan jarum dan benang.",
+                "Aku menyatukan kain dengan tusuk-tusuk kecil."
+            ],
+            "options": ["Angkat beban", "Menjahit", "Bermain sepatu roda"],
+            "icons": ["dumbel", "menjahit", "sepatu roda"],
+            "optionImages": [
+                "/images/benda/dumbel.jpg",
+                "/images/benda/menjahit.jpg",
+                "/images/benda/sepatu%20roda.jpg"
+            ],
+            "answer": 1,
+            "hint": "Kegiatan apa yang menyatukan kain menggunakan jarum dan benang?",
+            "chips": [
+                "membuat benda dari kain",
+                "menggunakan jarum dan benang",
+                "menyatukan kain"
+            ]
+        },
+        {
+            "clues": [
+                "Aku menyambung kain dengan alat bermotor.",
+                "Kain bergerak di bawah jarum saat alat bekerja.",
+                "Aku mengendalikan pedal untuk membuat jahitan."
+            ],
+            "options": [
+                "Menjahit dengan mesin",
+                "Bermain skateboard",
+                "Bermain gim"
+            ],
+            "icons": ["mesin jahit", "skateboard", "gamer"],
+            "optionImages": [
+                "/images/benda/mesin%20jahit.jpg",
+                "/images/benda/skateboard.jpg",
+                "/images/benda/gamer.jpg"
+            ],
+            "answer": 0,
+            "hint": "Kegiatan menjahit apa yang menggunakan pedal dan mesin?",
+            "chips": [
+                "menyambung kain",
+                "mengendalikan pedal",
+                "menggunakan mesin jahit"
+            ]
+        },
+        {
+            "clues": [
+                "Aku membidik sasaran dari garis latihan.",
+                "Aku menarik tali pada sebuah busur.",
+                "Aku melepaskan anak panah ke arah target."
+            ],
+            "options": ["Berkebun", "Fotografi", "Memanah"],
+            "icons": ["skop", "kamera", "panah"],
+            "optionImages": [
+                "/images/benda/skop.jpg",
+                "/images/benda/kamera.jpg",
+                "/images/benda/panah.jpg"
+            ],
+            "answer": 2,
+            "hint": "Olahraga apa yang menggunakan busur untuk melepaskan anak panah?",
+            "chips": [
+                "membidik sasaran",
+                "menarik tali busur",
+                "melepaskan anak panah"
+            ]
+        },
+        {
+            "clues": [
+                "Aku menunggu ikan di tepi air.",
+                "Aku menggunakan alat bertali dan berkail.",
+                "Aku memasang umpan agar ikan tertarik."
+            ],
+            "options": ["Pramuka", "Memancing", "Astronomi"],
+            "icons": ["kompas dan pita", "pancing", "teleskop"],
+            "optionImages": [
+                "/images/benda/kompas%20dan%20pita.jpg",
+                "/images/benda/pancing.jpg",
+                "/images/benda/teleskop.jpg"
+            ],
+            "answer": 1,
+            "hint": "Hobi apa yang memakai kail dan umpan untuk mendapatkan ikan?",
+            "chips": [
+                "menunggu ikan di tepi air",
+                "menggunakan kail",
+                "memasang umpan"
+            ]
+        },
+        {
+            "clues": [
+                "Aku membuat tulisan dengan bentuk yang indah.",
+                "Aku menggunakan pena dan tinta.",
+                "Aku mengatur goresan agar huruf tampak menarik."
+            ],
+            "options": ["Kaligrafi", "Bermain ukulele", "Melukis"],
+            "icons": ["pen dan tinta", "ukulele", "kuas"],
+            "optionImages": [
+                "/images/benda/pen%20dan%20tinta.jpg",
+                "/images/benda/ukulele.jpg",
+                "/images/benda/kuas.jpg"
+            ],
+            "answer": 0,
+            "hint": "Seni menulis indah apa yang menggunakan pena dan tinta?",
+            "chips": [
+                "membuat tulisan indah",
+                "menggunakan pena dan tinta",
+                "menghias bentuk huruf"
+            ]
+        },
+        {
+            "clues": [
+                "Aku membentuk tanah liat menjadi benda.",
+                "Bahan itu berputar di atas sebuah roda.",
+                "Hasil karyaku dapat berupa mangkuk keramik."
+            ],
+            "options": ["Bermain biola", "Menyelam", "Membuat keramik"],
+            "icons": ["biola", "maskerselamdanskuba", "roda pemutar keramik"],
+            "optionImages": [
+                "/images/benda/biola.jpg",
+                "/images/benda/maskerselamdanskuba.jpg",
+                "/images/benda/roda%20pemutar%20keramik.jpg"
+            ],
+            "answer": 2,
+            "hint": "Kegiatan apa yang membentuk tanah liat di atas roda putar?",
+            "chips": [
+                "membentuk tanah liat",
+                "menggunakan roda putar",
+                "membuat mangkuk"
+            ]
+        },
+        {
+            "clues": [
+                "Aku meluncur di lintasan yang rata.",
+                "Aku memakai sepatu dengan roda kecil.",
+                "Aku menjaga keseimbangan saat bergerak."
+            ],
+            "options": ["Memasak", "Bermain sepatu roda", "Bermain catur"],
+            "icons": ["memasak", "sepatu roda", "catur"],
+            "optionImages": [
+                "/images/benda/memasak.jpg",
+                "/images/benda/sepatu%20roda.jpg",
+                "/images/benda/catur.jpg"
+            ],
+            "answer": 1,
+            "hint": "Kegiatan apa yang dilakukan dengan sepatu beroda?",
+            "chips": [
+                "meluncur di lintasan",
+                "memakai sepatu beroda",
+                "menjaga keseimbangan"
+            ]
+        },
+        {
+            "clues": [
+                "Aku meluncur di atas papan beroda.",
+                "Aku menjaga keseimbangan dengan kedua kaki.",
+                "Aku memakai helm saat berlatih."
+            ],
+            "options": ["Bermain skateboard", "Angkat beban", "Menjahit"],
+            "icons": ["skateboard", "dumbel", "menjahit"],
+            "optionImages": [
+                "/images/benda/skateboard.jpg",
+                "/images/benda/dumbel.jpg",
+                "/images/benda/menjahit.jpg"
+            ],
+            "answer": 0,
+            "hint": "Olahraga apa yang menggunakan papan kecil beroda?",
+            "chips": [
+                "meluncur di atas papan",
+                "menjaga keseimbangan",
+                "menggunakan helm"
+            ]
+        },
+        {
+            "clues": [
+                "Aku menanam dan merawat tumbuhan.",
+                "Aku menggemburkan tanah dengan sekop.",
+                "Aku menyiram bibit agar tumbuh subur."
+            ],
+            "options": ["Bermain gim", "Menjahit dengan mesin", "Berkebun"],
+            "icons": ["gamer", "mesin jahit", "skop"],
+            "optionImages": [
+                "/images/benda/gamer.jpg",
+                "/images/benda/mesin%20jahit.jpg",
+                "/images/benda/skop.jpg"
+            ],
+            "answer": 2,
+            "hint": "Hobi apa yang menggunakan sekop untuk menanam dan merawat tumbuhan?",
+            "chips": [
+                "menanam tumbuhan",
+                "menggemburkan tanah",
+                "merawat bibit"
+            ]
+        },
+        {
+            "clues": [
+                "Aku mengamati benda-benda di langit.",
+                "Aku menggunakan alat untuk melihat objek yang jauh.",
+                "Aku tertarik pada bulan dan bintang."
+            ],
+            "options": ["Memanah", "Astronomi", "Fotografi"],
+            "icons": ["panah", "teleskop", "kamera"],
+            "optionImages": [
+                "/images/benda/panah.jpg",
+                "/images/benda/teleskop.jpg",
+                "/images/benda/kamera.jpg"
+            ],
+            "answer": 1,
+            "hint": "Kegiatan apa yang mengamati bulan dan bintang menggunakan teleskop?",
+            "chips": [
+                "mengamati benda langit",
+                "menggunakan teleskop",
+                "mempelajari bulan dan bintang"
+            ]
+        },
+        {
+            "clues": [
+                "Aku memainkan alat musik berdawai.",
+                "Alat musikku berukuran kecil dan dipetik.",
+                "Aku dapat mengiringi lagu dengan bunyinya."
+            ],
+            "options": ["Bermain ukulele", "Pramuka", "Memancing"],
+            "icons": ["ukulele", "kompas dan pita", "pancing"],
+            "optionImages": [
+                "/images/benda/ukulele.jpg",
+                "/images/benda/kompas%20dan%20pita.jpg",
+                "/images/benda/pancing.jpg"
+            ],
+            "answer": 0,
+            "hint": "Alat musik kecil apa yang dimainkan dengan memetik dawai?",
+            "chips": ["alat musik berdawai", "berukuran kecil", "memetik dawai"]
+        }
+    ]
 }

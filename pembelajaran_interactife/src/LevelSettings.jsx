@@ -1,5 +1,5 @@
 import { useId, useRef, useState } from 'react'
-import { DEFAULT_LEVEL_SETTINGS, parseLevelSettings, saveLevelSettings } from './levelSettings.js'
+import { parseLevelSettings, saveLevelSettings } from './levelSettings.js'
 
 const LEVEL_TABS = [
   { title: 'Level 1', key: 'level1', description: 'Pertanyaan dan pilihan jawaban' },
@@ -302,7 +302,7 @@ function updateArrayItem(array, index, item) {
   return array.map((current, itemIndex) => (itemIndex === index ? item : current))
 }
 
-export function LevelSettings({ initialSettings, loadError = '', onBack, onSave }) {
+export function LevelSettings({ initialSettings, defaultSettings, loadError = '', onBack, onSave }) {
   const [settings, setSettings] = useState(initialSettings)
   const [selectedLevel, setSelectedLevel] = useState(0)
   const [selectedItem, setSelectedItem] = useState(0)
@@ -475,12 +475,12 @@ export function LevelSettings({ initialSettings, loadError = '', onBack, onSave 
 
   const restoreDefaults = () => {
     if (!window.confirm('Pulihkan semua isi empat level dan tampilan ke pengaturan awal? Perubahan custom akan diganti.')) return
-    setSettings(DEFAULT_LEVEL_SETTINGS)
+    setSettings(defaultSettings)
     setSelectedLevel(0)
     setSelectedItem(0)
     setDirty(true)
     setError('')
-    setNotice('Konten bawaan dimuat. Tekan Simpan di Browser atau Ekspor JSON + Foto untuk menerapkannya.')
+    setNotice('Konten dari public/level-content.json dimuat. Tekan Simpan di Browser atau Ekspor JSON + Foto untuk menerapkannya.')
   }
 
   if (selectedLevel !== 4 && !item) return null
