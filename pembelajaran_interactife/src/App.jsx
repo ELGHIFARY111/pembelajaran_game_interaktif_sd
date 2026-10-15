@@ -6,7 +6,7 @@ import { LevelScreen } from './levels.jsx'
 import { CityMap, Finale, Hud, Intro, LevelResult } from './screens.jsx'
 import { LevelSettings } from './LevelSettings.jsx'
 import { loadLevelSettings, parseLevelSettings, SETTINGS_STORAGE_KEY } from './levelSettings.js'
-import { play, setMuted } from './sound.js'
+import { play, setMuted, startMusic, stopMusic } from './sound.js'
 
 const initialState = {
   screen: 'intro', // intro | map | level | result | finale
@@ -94,6 +94,16 @@ export default function App() {
     return () => { active = false }
   }, [storedSettings.error])
 
+  useEffect(() => {
+    if (['map', 'level', 'result', 'finale'].includes(state.screen)) {
+      startMusic()
+    } else {
+      stopMusic()
+    }
+
+    return stopMusic
+  }, [state.screen])
+
   const toggleSound = () => {
     setMuted(!state.muted)
     dispatch({ type: 'sound' })
@@ -121,9 +131,6 @@ export default function App() {
     <div className="app">
       <div className={`bg${levelSettings.appearance.backgroundImage ? ' bg--custom' : ''}`} aria-hidden="true">
         {levelSettings.appearance.backgroundImage && <img src={levelSettings.appearance.backgroundImage} alt="" />}
-        {[0, 1, 2, 3, 4, 5].map((i) => (
-          <i key={i} />
-        ))}
       </div>
 
       {state.screen !== 'intro' && state.screen !== 'custom' && (

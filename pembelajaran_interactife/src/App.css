@@ -114,68 +114,6 @@ h3 {
   object-fit: cover;
   opacity: 0.18;
 }
-.bg--custom i {
-  opacity: 0.12;
-}
-.bg i {
-  position: absolute;
-  display: block;
-  border-radius: 50%;
-  opacity: 0.55;
-  animation: float 9s ease-in-out infinite alternate;
-}
-.bg i:nth-child(1) {
-  width: 90px;
-  height: 90px;
-  left: 4%;
-  top: 18%;
-  background: var(--sun);
-}
-.bg i:nth-child(2) {
-  width: 56px;
-  height: 56px;
-  left: 90%;
-  top: 30%;
-  background: var(--pink);
-  animation-delay: -2s;
-}
-.bg i:nth-child(3) {
-  width: 70px;
-  height: 70px;
-  left: 80%;
-  top: 70%;
-  background: var(--mint);
-  animation-delay: -4s;
-}
-.bg i:nth-child(4) {
-  width: 44px;
-  height: 44px;
-  left: 10%;
-  top: 75%;
-  background: var(--purple);
-  animation-delay: -6s;
-}
-.bg i:nth-child(5) {
-  width: 34px;
-  height: 34px;
-  left: 50%;
-  top: 8%;
-  background: var(--orange);
-  animation-delay: -3s;
-}
-.bg i:nth-child(6) {
-  width: 50px;
-  height: 50px;
-  left: 30%;
-  top: 88%;
-  background: var(--blue);
-  animation-delay: -5s;
-}
-@keyframes float {
-  to {
-    transform: translateY(-26px) rotate(25deg);
-  }
-}
 .stage {
   position: relative;
   z-index: 1;
